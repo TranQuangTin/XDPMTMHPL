@@ -1,0 +1,52 @@
+C:\Users\Hai\Documents\Visual Studio 2015\Projects\Tour_Demo - Copy\BUS\bin\Debug\BUS.dll.config
+C:\Users\Hai\Documents\Visual Studio 2015\Projects\Tour_Demo - Copy\BUS\bin\Debug\BUS.dll
+C:\Users\Hai\Documents\Visual Studio 2015\Projects\Tour_Demo - Copy\BUS\bin\Debug\BUS.pdb
+C:\Users\Hai\Documents\Visual Studio 2015\Projects\Tour_Demo - Copy\BUS\obj\Debug\BUS.dll
+C:\Users\Hai\Documents\Visual Studio 2015\Projects\Tour_Demo - Copy\BUS\obj\Debug\BUS.pdb
+C:\Users\Hai\Documents\Visual Studio 2015\Projects\Tour_DemoMain\BUS\bin\Debug\BUS.dll.config
+C:\Users\Hai\Documents\Visual Studio 2015\Projects\Tour_DemoMain\BUS\bin\Debug\BUS.dll
+C:\Users\Hai\Documents\Visual Studio 2015\Projects\Tour_DemoMain\BUS\bin\Debug\BUS.pdb
+C:\Users\Hai\Documents\Visual Studio 2015\Projects\Tour_DemoMain\BUS\obj\Debug\BUS.dll
+C:\Users\Hai\Documents\Visual Studio 2015\Projects\Tour_DemoMain\BUS\obj\Debug\BUS.pdb
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\BUS\bin\Debug\BUS.dll.config
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\BUS\bin\Debug\BUS.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\BUS\bin\Debug\BUS.pdb
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\BUS\bin\Debug\DAO.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\BUS\bin\Debug\EF.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\BUS\bin\Debug\EntityFramework.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\BUS\bin\Debug\EntityFramework.SqlServer.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\BUS\bin\Debug\DAO.pdb
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\BUS\bin\Debug\EF.pdb
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\BUS\bin\Debug\EntityFramework.xml
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\BUS\bin\Debug\EntityFramework.SqlServer.xml
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\BUS\obj\Debug\BUS.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\BUS\obj\Debug\BUS.pdb
+C:\Users\Hai\Desktop\phanlop\Tour_DemoMain\BUS\bin\Debug\BUS.dll.config
+C:\Users\Hai\Desktop\phanlop\Tour_DemoMain\BUS\bin\Debug\BUS.dll
+C:\Users\Hai\Desktop\phanlop\Tour_DemoMain\BUS\bin\Debug\BUS.pdb
+C:\Users\Hai\Desktop\phanlop\Tour_DemoMain\BUS\bin\Debug\DAO.dll
+C:\Users\Hai\Desktop\phanlop\Tour_DemoMain\BUS\bin\Debug\EF.dll
+C:\Users\Hai\Desktop\phanlop\Tour_DemoMain\BUS\bin\Debug\EntityFramework.dll
+C:\Users\Hai\Desktop\phanlop\Tour_DemoMain\BUS\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Hai\Desktop\phanlop\Tour_DemoMain\BUS\bin\Debug\DAO.pdb
+C:\Users\Hai\Desktop\phanlop\Tour_DemoMain\BUS\bin\Debug\EF.pdb
+C:\Users\Hai\Desktop\phanlop\Tour_DemoMain\BUS\bin\Debug\EntityFramework.xml
+C:\Users\Hai\Desktop\phanlop\Tour_DemoMain\BUS\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Hai\Desktop\phanlop\Tour_DemoMain\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+C:\Users\Hai\Desktop\phanlop\Tour_DemoMain\BUS\obj\Debug\BUS.dll
+C:\Users\Hai\Desktop\phanlop\Tour_DemoMain\BUS\obj\Debug\BUS.pdb
+D:\XDPMTMHPL\Tour_DemoMain\BUS\bin\Debug\BUS.dll.config
+D:\XDPMTMHPL\Tour_DemoMain\BUS\bin\Debug\BUS.dll
+D:\XDPMTMHPL\Tour_DemoMain\BUS\bin\Debug\BUS.pdb
+D:\XDPMTMHPL\Tour_DemoMain\BUS\bin\Debug\DAO.dll
+D:\XDPMTMHPL\Tour_DemoMain\BUS\bin\Debug\EF.dll
+D:\XDPMTMHPL\Tour_DemoMain\BUS\bin\Debug\EntityFramework.dll
+D:\XDPMTMHPL\Tour_DemoMain\BUS\bin\Debug\EntityFramework.SqlServer.dll
+D:\XDPMTMHPL\Tour_DemoMain\BUS\bin\Debug\DAO.pdb
+D:\XDPMTMHPL\Tour_DemoMain\BUS\bin\Debug\EF.pdb
+D:\XDPMTMHPL\Tour_DemoMain\BUS\bin\Debug\EntityFramework.xml
+D:\XDPMTMHPL\Tour_DemoMain\BUS\bin\Debug\EntityFramework.SqlServer.xml
+D:\XDPMTMHPL\Tour_DemoMain\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+D:\XDPMTMHPL\Tour_DemoMain\BUS\obj\Debug\BUS.dll
+D:\XDPMTMHPL\Tour_DemoMain\BUS\obj\Debug\BUS.pdb

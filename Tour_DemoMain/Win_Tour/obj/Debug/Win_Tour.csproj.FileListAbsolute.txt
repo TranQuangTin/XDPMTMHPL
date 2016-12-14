@@ -1,0 +1,225 @@
+c:\users\hai\documents\visual studio 2015\Projects\Tour_Demo\Win_Tour\bin\Debug\Win_Tour.exe.config
+c:\users\hai\documents\visual studio 2015\Projects\Tour_Demo\Win_Tour\bin\Debug\Win_Tour.exe
+c:\users\hai\documents\visual studio 2015\Projects\Tour_Demo\Win_Tour\bin\Debug\Win_Tour.pdb
+c:\users\hai\documents\visual studio 2015\Projects\Tour_Demo\Win_Tour\obj\Debug\Win_Tour.csprojResolveAssemblyReference.cache
+c:\users\hai\documents\visual studio 2015\Projects\Tour_Demo\Win_Tour\obj\Debug\Win_Tour.Properties.Resources.resources
+c:\users\hai\documents\visual studio 2015\Projects\Tour_Demo\Win_Tour\obj\Debug\Win_Tour.csproj.GenerateResource.Cache
+c:\users\hai\documents\visual studio 2015\Projects\Tour_Demo\Win_Tour\obj\Debug\Win_Tour.exe
+c:\users\hai\documents\visual studio 2015\Projects\Tour_Demo\Win_Tour\obj\Debug\Win_Tour.pdb
+C:\Users\Hai\Documents\Visual Studio 2015\Projects\Tour_Demo - Copy\Win_Tour\bin\Debug\Win_Tour.exe.config
+C:\Users\Hai\Documents\Visual Studio 2015\Projects\Tour_Demo - Copy\Win_Tour\bin\Debug\Win_Tour.exe
+C:\Users\Hai\Documents\Visual Studio 2015\Projects\Tour_Demo - Copy\Win_Tour\bin\Debug\Win_Tour.pdb
+C:\Users\Hai\Documents\Visual Studio 2015\Projects\Tour_Demo - Copy\Win_Tour\obj\Debug\Win_Tour.Properties.Resources.resources
+C:\Users\Hai\Documents\Visual Studio 2015\Projects\Tour_Demo - Copy\Win_Tour\obj\Debug\Win_Tour.csproj.GenerateResource.Cache
+C:\Users\Hai\Documents\Visual Studio 2015\Projects\Tour_Demo - Copy\Win_Tour\obj\Debug\Win_Tour.exe
+C:\Users\Hai\Documents\Visual Studio 2015\Projects\Tour_Demo - Copy\Win_Tour\obj\Debug\Win_Tour.pdb
+C:\Users\Hai\Documents\Visual Studio 2015\Projects\Tour_DemoMain\Win_Tour\bin\Debug\Win_Tour.exe.config
+C:\Users\Hai\Documents\Visual Studio 2015\Projects\Tour_DemoMain\Win_Tour\bin\Debug\Win_Tour.exe
+C:\Users\Hai\Documents\Visual Studio 2015\Projects\Tour_DemoMain\Win_Tour\bin\Debug\Win_Tour.pdb
+C:\Users\Hai\Documents\Visual Studio 2015\Projects\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.csprojResolveAssemblyReference.cache
+C:\Users\Hai\Documents\Visual Studio 2015\Projects\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.Properties.Resources.resources
+C:\Users\Hai\Documents\Visual Studio 2015\Projects\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.csproj.GenerateResource.Cache
+C:\Users\Hai\Documents\Visual Studio 2015\Projects\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.exe
+C:\Users\Hai\Documents\Visual Studio 2015\Projects\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.pdb
+C:\Users\Hai\Documents\Visual Studio 2015\Projects\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.Form1.resources
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\Win_Tour.exe.config
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.exe
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.pdb
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.csprojResolveAssemblyReference.cache
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.Properties.Resources.resources
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.csproj.GenerateResource.Cache
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\Win_Tour.exe
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\Win_Tour.pdb
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\BUS.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\EF.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\EntityFramework.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\EntityFramework.SqlServer.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\DAO.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\BUS.pdb
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\EF.pdb
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\EntityFramework.xml
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\EntityFramework.SqlServer.xml
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\DAO.pdb
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.MainForm.resources
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.exe.licenses
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.Tour1.resources
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.ThemGia.resources
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.CauHinhDiaDiem.resources
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.UCDiaDiem.resources
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.UCGia.resources
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.UCDDTQ.resources
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.UCThemTour.resources
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.UCThongKe.resources
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.PieChart.resources
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\DevExpress.Charts.v16.1.Core.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\DevExpress.Data.v16.1.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\DevExpress.Printing.v16.1.Core.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\DevExpress.Sparkline.v16.1.Core.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\DevExpress.Utils.v16.1.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\DevExpress.XtraBars.v16.1.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\DevExpress.XtraCharts.v16.1.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\DevExpress.XtraCharts.v16.1.UI.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\DevExpress.XtraEditors.v16.1.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\DevExpress.XtraGrid.v16.1.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\DevExpress.XtraLayout.v16.1.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\DevExpress.XtraPrinting.v16.1.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\DevExpress.Data.v16.1.xml
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\DevExpress.Printing.v16.1.Core.xml
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\DevExpress.Sparkline.v16.1.Core.xml
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\DevExpress.Utils.v16.1.xml
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\DevExpress.XtraBars.v16.1.xml
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\DevExpress.XtraCharts.v16.1.xml
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\DevExpress.XtraCharts.v16.1.UI.xml
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\DevExpress.XtraEditors.v16.1.xml
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\DevExpress.XtraGrid.v16.1.xml
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\DevExpress.XtraLayout.v16.1.xml
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\DevExpress.XtraPrinting.v16.1.xml
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\de\DevExpress.Data.v16.1.resources.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\es\DevExpress.Data.v16.1.resources.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\ja\DevExpress.Data.v16.1.resources.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\ru\DevExpress.Data.v16.1.resources.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\de\DevExpress.Printing.v16.1.Core.resources.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\es\DevExpress.Printing.v16.1.Core.resources.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\ja\DevExpress.Printing.v16.1.Core.resources.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\ru\DevExpress.Printing.v16.1.Core.resources.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\de\DevExpress.Sparkline.v16.1.Core.resources.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\es\DevExpress.Sparkline.v16.1.Core.resources.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\ja\DevExpress.Sparkline.v16.1.Core.resources.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\ru\DevExpress.Sparkline.v16.1.Core.resources.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\de\DevExpress.Utils.v16.1.resources.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\es\DevExpress.Utils.v16.1.resources.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\ja\DevExpress.Utils.v16.1.resources.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\ru\DevExpress.Utils.v16.1.resources.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\de\DevExpress.XtraBars.v16.1.resources.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\es\DevExpress.XtraBars.v16.1.resources.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\ja\DevExpress.XtraBars.v16.1.resources.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\ru\DevExpress.XtraBars.v16.1.resources.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\de\DevExpress.XtraCharts.v16.1.resources.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\es\DevExpress.XtraCharts.v16.1.resources.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\ja\DevExpress.XtraCharts.v16.1.resources.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\ru\DevExpress.XtraCharts.v16.1.resources.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\de\DevExpress.XtraEditors.v16.1.resources.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\es\DevExpress.XtraEditors.v16.1.resources.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\ja\DevExpress.XtraEditors.v16.1.resources.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\ru\DevExpress.XtraEditors.v16.1.resources.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\de\DevExpress.XtraGrid.v16.1.resources.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\es\DevExpress.XtraGrid.v16.1.resources.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\ja\DevExpress.XtraGrid.v16.1.resources.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\ru\DevExpress.XtraGrid.v16.1.resources.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\de\DevExpress.XtraLayout.v16.1.resources.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\es\DevExpress.XtraLayout.v16.1.resources.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\ja\DevExpress.XtraLayout.v16.1.resources.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\ru\DevExpress.XtraLayout.v16.1.resources.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\de\DevExpress.XtraPrinting.v16.1.resources.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\es\DevExpress.XtraPrinting.v16.1.resources.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\ja\DevExpress.XtraPrinting.v16.1.resources.dll
+D:\XDPMTMHPL\thu\New folder\Tour_DemoMain\Win_Tour\bin\Debug\ru\DevExpress.XtraPrinting.v16.1.resources.dll
+C:\Users\Hai\Desktop\phanlop\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.csprojResolveAssemblyReference.cache
+C:\Users\Hai\Desktop\phanlop\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.CauHinhDiaDiem.resources
+C:\Users\Hai\Desktop\phanlop\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.MainForm.resources
+C:\Users\Hai\Desktop\phanlop\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.PieChart.resources
+C:\Users\Hai\Desktop\phanlop\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.Properties.Resources.resources
+C:\Users\Hai\Desktop\phanlop\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.ThemGia.resources
+C:\Users\Hai\Desktop\phanlop\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.Tour1.resources
+C:\Users\Hai\Desktop\phanlop\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.UCDDTQ.resources
+C:\Users\Hai\Desktop\phanlop\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.UCDiaDiem.resources
+C:\Users\Hai\Desktop\phanlop\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.UCGia.resources
+C:\Users\Hai\Desktop\phanlop\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.UCThemTour.resources
+C:\Users\Hai\Desktop\phanlop\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.UCThongKe.resources
+C:\Users\Hai\Desktop\phanlop\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.csproj.GenerateResource.Cache
+C:\Users\Hai\Desktop\phanlop\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.exe.licenses
+C:\Users\Hai\Desktop\phanlop\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.exe
+C:\Users\Hai\Desktop\phanlop\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.pdb
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\Win_Tour.exe.config
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.exe
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.pdb
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\Win_Tour.exe
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\Win_Tour.pdb
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\BUS.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\DevExpress.Charts.v16.1.Core.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\DevExpress.Data.v16.1.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\DevExpress.Printing.v16.1.Core.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\DevExpress.Sparkline.v16.1.Core.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\DevExpress.Utils.v16.1.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\DevExpress.XtraBars.v16.1.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\DevExpress.XtraCharts.v16.1.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\DevExpress.XtraCharts.v16.1.UI.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\DevExpress.XtraEditors.v16.1.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\DevExpress.XtraGrid.v16.1.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\DevExpress.XtraLayout.v16.1.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\DevExpress.XtraPrinting.v16.1.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\EF.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\EntityFramework.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\EntityFramework.SqlServer.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\DAO.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\BUS.pdb
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\EF.pdb
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\DevExpress.Data.v16.1.xml
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\DevExpress.Printing.v16.1.Core.xml
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\DevExpress.Sparkline.v16.1.Core.xml
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\DevExpress.Utils.v16.1.xml
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\DevExpress.XtraBars.v16.1.xml
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\DevExpress.XtraCharts.v16.1.xml
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\DevExpress.XtraCharts.v16.1.UI.xml
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\DevExpress.XtraEditors.v16.1.xml
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\DevExpress.XtraGrid.v16.1.xml
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\DevExpress.XtraLayout.v16.1.xml
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\DevExpress.XtraPrinting.v16.1.xml
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\EntityFramework.xml
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\EntityFramework.SqlServer.xml
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\DAO.pdb
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\de\DevExpress.Data.v16.1.resources.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\es\DevExpress.Data.v16.1.resources.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\ja\DevExpress.Data.v16.1.resources.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\ru\DevExpress.Data.v16.1.resources.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\de\DevExpress.Printing.v16.1.Core.resources.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\es\DevExpress.Printing.v16.1.Core.resources.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\ja\DevExpress.Printing.v16.1.Core.resources.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\ru\DevExpress.Printing.v16.1.Core.resources.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\de\DevExpress.Sparkline.v16.1.Core.resources.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\es\DevExpress.Sparkline.v16.1.Core.resources.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\ja\DevExpress.Sparkline.v16.1.Core.resources.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\ru\DevExpress.Sparkline.v16.1.Core.resources.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\de\DevExpress.Utils.v16.1.resources.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\es\DevExpress.Utils.v16.1.resources.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\ja\DevExpress.Utils.v16.1.resources.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\ru\DevExpress.Utils.v16.1.resources.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\de\DevExpress.XtraBars.v16.1.resources.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\es\DevExpress.XtraBars.v16.1.resources.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\ja\DevExpress.XtraBars.v16.1.resources.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\ru\DevExpress.XtraBars.v16.1.resources.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\de\DevExpress.XtraCharts.v16.1.resources.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\es\DevExpress.XtraCharts.v16.1.resources.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\ja\DevExpress.XtraCharts.v16.1.resources.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\ru\DevExpress.XtraCharts.v16.1.resources.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\de\DevExpress.XtraEditors.v16.1.resources.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\es\DevExpress.XtraEditors.v16.1.resources.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\ja\DevExpress.XtraEditors.v16.1.resources.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\ru\DevExpress.XtraEditors.v16.1.resources.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\de\DevExpress.XtraGrid.v16.1.resources.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\es\DevExpress.XtraGrid.v16.1.resources.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\ja\DevExpress.XtraGrid.v16.1.resources.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\ru\DevExpress.XtraGrid.v16.1.resources.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\de\DevExpress.XtraLayout.v16.1.resources.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\es\DevExpress.XtraLayout.v16.1.resources.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\ja\DevExpress.XtraLayout.v16.1.resources.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\ru\DevExpress.XtraLayout.v16.1.resources.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\de\DevExpress.XtraPrinting.v16.1.resources.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\es\DevExpress.XtraPrinting.v16.1.resources.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\ja\DevExpress.XtraPrinting.v16.1.resources.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\bin\Debug\ru\DevExpress.XtraPrinting.v16.1.resources.dll
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.csprojResolveAssemblyReference.cache
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.CauHinhDiaDiem.resources
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.MainForm.resources
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.PieChart.resources
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.Properties.Resources.resources
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.ThemGia.resources
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.Tour1.resources
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.UCDDTQ.resources
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.UCDiaDiem.resources
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.UCGia.resources
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.UCThemTour.resources
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.UCThongKe.resources
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.csproj.GenerateResource.Cache
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.exe.licenses
+D:\XDPMTMHPL\Tour_DemoMain\Win_Tour\obj\Debug\Win_Tour.FormSuaMoTa.resources
