@@ -177,6 +177,7 @@
     <Compile Include="Models\CusInfo.cs" />
     <Compile Include="Models\ReportInfo.cs" />
     <Compile Include="Models\statistic.cs" />
+    <Compile Include="Models\StatisticOrderCount.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

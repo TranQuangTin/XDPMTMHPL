@@ -45,3 +45,15 @@ D:\XDPMTMHPL\Tour_DemoMain\DAO\bin\Debug\EntityFramework.SqlServer.xml
 D:\XDPMTMHPL\Tour_DemoMain\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
 D:\XDPMTMHPL\Tour_DemoMain\DAO\obj\Debug\DAO.dll
 D:\XDPMTMHPL\Tour_DemoMain\DAO\obj\Debug\DAO.pdb
+C:\Users\Hai\Documents\GitHub\XDPMTMHPL\Tour_DemoMain\DAO\bin\Debug\DAO.dll.config
+C:\Users\Hai\Documents\GitHub\XDPMTMHPL\Tour_DemoMain\DAO\bin\Debug\DAO.dll
+C:\Users\Hai\Documents\GitHub\XDPMTMHPL\Tour_DemoMain\DAO\bin\Debug\DAO.pdb
+C:\Users\Hai\Documents\GitHub\XDPMTMHPL\Tour_DemoMain\DAO\bin\Debug\EF.dll
+C:\Users\Hai\Documents\GitHub\XDPMTMHPL\Tour_DemoMain\DAO\bin\Debug\EntityFramework.dll
+C:\Users\Hai\Documents\GitHub\XDPMTMHPL\Tour_DemoMain\DAO\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Hai\Documents\GitHub\XDPMTMHPL\Tour_DemoMain\DAO\bin\Debug\EF.pdb
+C:\Users\Hai\Documents\GitHub\XDPMTMHPL\Tour_DemoMain\DAO\bin\Debug\EntityFramework.xml
+C:\Users\Hai\Documents\GitHub\XDPMTMHPL\Tour_DemoMain\DAO\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Hai\Documents\GitHub\XDPMTMHPL\Tour_DemoMain\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+C:\Users\Hai\Documents\GitHub\XDPMTMHPL\Tour_DemoMain\DAO\obj\Debug\DAO.dll
+C:\Users\Hai\Documents\GitHub\XDPMTMHPL\Tour_DemoMain\DAO\obj\Debug\DAO.pdb
