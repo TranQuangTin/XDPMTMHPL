@@ -30,6 +30,8 @@
     top:-10px;
 }
 
+
+
 .nn-body{
     padding:5px;
     min-height:550px;
@@ -47,5 +49,5 @@
 }
 
 .nn-artical{
-    box-shadow:0 0 5px lightgray;
+    box-shadow:0 0 5px darkgray;
 }

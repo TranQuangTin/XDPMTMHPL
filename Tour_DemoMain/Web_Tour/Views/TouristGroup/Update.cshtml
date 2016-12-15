@@ -13,69 +13,75 @@
     <div class="panel-heading">
         <strong>Sửa Thông Tin Tour</strong>
     </div>
-</div> 
+</div>
 
 
 
-    @using (Html.BeginForm("Update", "TouristGroup", FormMethod.Post))
-    {
-        @Html.AntiForgeryToken()
+@using (Html.BeginForm("Update", "TouristGroup", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
 
-        <div class="form-horizontal">
-            <hr />
-            
-                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-
-                <div class="form-group">
-                    @Html.HiddenFor(model => model.MaDoan, htmlAttributes: new { @class = "control-label col-md-2 text-center" })
-                    <div class="col-md-10">
-                        @Html.HiddenFor(model => model.MaDoan, new { @class = "form-control" })
-                        @Html.ValidationMessageFor(model => model.MaDoan, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="control-label col-md-2">Tên Đoàn</label>
-                    <div class="col-md-10">
-                        @Html.TextBoxFor(model => model.TenDoan, new { @class = "form-control" })
-                        @Html.ValidationMessageFor(model => model.TenDoan, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="control-label col-md-2">Tên Tour</label>
-
-                    <div class="col-md-10">
-                        @Html.DropDownListFor(model => model.MaTour, null, new { @class = "form-control" })
-                        @Html.ValidationMessageFor(model => model.MaTour, "", new { @class = "text-danger" })
-                    </div>
-                </div>
+    <div class="form-horizontal" style="margin-left:200px;">
 
 
-                <div class="form-group">
-                    <label class="control-label col-md-2">Ngày Khởi Hành</label>
-                    <div class="col-md-10">
-                        @Html.TextBoxFor(model => model.NgayKhoiHanh, "{0:yyyy-MM-dd}", new { @class = "form-control", @type = "date" })
-                        @Html.ValidationMessageFor(model => model.NgayKhoiHanh, "", new { @class = "text-danger" })
-                    </div>
-                </div>
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
-
-                <div class="form-group ">
-                    <label class="control-label col-md-2">Mô Tả</label>
-                    <div class="col-md-10">
-                        @Html.TextAreaFor(model => model.MoTa, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.MoTa, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-
-
-
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" value="Sửa" class="btn btn-default" />
-                    </div>
-                </div>
+        <div class="form-group">
+            @Html.HiddenFor(model => model.MaDoan, htmlAttributes: new { @class = "control-label col-md-4 text-center" })
+            <div class="col-md-8">
+                @Html.HiddenFor(model => model.MaDoan, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.MaDoan, "", new { @class = "text-danger" })
             </div>
-    }
+        </div>
 
+        <div class="form-group">
+            <label class="control-label col-md-4">Tên Đoàn</label>
+            <div class="col-md-8">
+                @Html.TextBoxFor(model => model.TenDoan, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.TenDoan, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-4">Tên Tour</label>
+
+            <div class="col-md-8">
+                @Html.DropDownListFor(model => model.MaTour, null, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.MaTour, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label class="control-label col-md-4">Ngày Khởi Hành</label>
+            <div class="col-md-8">
+                @Html.TextBoxFor(model => model.NgayKhoiHanh, "{0:yyyy-MM-dd}", new { @class = "form-control", @type = "date" })
+                @Html.ValidationMessageFor(model => model.NgayKhoiHanh, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+        <div class="form-group ">
+            <label class="control-label col-md-4">Mô Tả</label>
+            <div class="col-md-8">
+                @Html.TextAreaFor(model => model.MoTa, new { @class = "form-control", @rows = "5" })
+                @Html.ValidationMessageFor(model => model.MoTa, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group ">
+            <label class="control-label col-md-4">Kết Thúc</label>
+            <div class="col-md-8">
+                
+                    @Html.CheckBox("Status", false,new { @style="margin:10px 0px 0px -2px;"})
+                
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10" style="margin-left:315px;">
+                <input type="submit" value="Sửa" class="btn btn-warning" />
+            </div>
+        </div>
+    </div>
+}

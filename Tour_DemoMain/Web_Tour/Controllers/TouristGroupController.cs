@@ -130,7 +130,7 @@ namespace Web_Tour.Controllers
         }
 
         [HttpPost]
-        public ActionResult Update(DoanDuLich model, int MaTour)
+        public ActionResult Update(DoanDuLich model, int MaTour, Boolean Status)
         {
             if (ModelState.IsValid)
             {
@@ -150,8 +150,17 @@ namespace Web_Tour.Controllers
                 {
                     model.NgayKetThuc = model.NgayKhoiHanh.AddDays(Convert.ToDouble(ngay));
                 }
-                model.TinhTrang = 1;
-                db.Entry(model).State = System.Data.Entity.EntityState.Modified;
+
+                if (Status == true)
+                {
+                    model.TinhTrang = 3;
+                    db.Entry(model).State = System.Data.Entity.EntityState.Modified;
+                }
+                else
+                {
+                    db.Entry(model).State = System.Data.Entity.EntityState.Modified;
+                }
+                
 
                 db.SaveChanges();
                 Load();

@@ -10,25 +10,25 @@
     </div>
     <table class="table table-hover table-responsive">
         <thead>
-            <tr class="alert-warning">
-                <td>Tên Đoàn</td>
-                <td>Số Điện Thoại</td>
-                <td>Giới tính</td>
-                <td>Đại Chỉ</td>
-                <td>Số Passport</td>
-                <td>Tình Trạng</td>
+            <tr class="alert-success">
+                <td class="text-center">Tên Đoàn</td>
+                <td class="text-center">Số Điện Thoại</td>
+                <td class="text-center">Giới tính</td>
+                <td class="text-center">Đại Chỉ</td>
+                <td class="text-center">Số Passport</td>
+                <td class="text-center">Tình Trạng</td>
             </tr>
         </thead>
         <tbody>
             @foreach (var item in Model)
             {
                 <tr>
-                    <td>@item.TenKhachHang</td>
-                    <td>@item.SDT</td>
-                    <td>@item.GioiTinh</td>
-                    <td>@item.DiaChi</td>
-                    <td>@item.PassportNumber</td>
-                    <td>@(item.TinhTrang ? "Chưa Có Đoàn" : "Đã Có Đoàn")</td>
+                    <td class="text-center">@item.TenKhachHang</td>
+                    <td class="text-center">@item.SDT</td>
+                    <td class="text-center">@item.GioiTinh</td>
+                    <td class="text-center">@item.DiaChi</td>
+                    <td class="text-center">@item.PassportNumber</td>
+                    <td class="text-center">@(item.TinhTrang ? "Chưa Có Đoàn" : "Đã Có Đoàn")</td>
                 </tr>
             }
         </tbody>

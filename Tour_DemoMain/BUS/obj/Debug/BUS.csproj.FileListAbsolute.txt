@@ -50,3 +50,17 @@ D:\XDPMTMHPL\Tour_DemoMain\BUS\bin\Debug\EntityFramework.SqlServer.xml
 D:\XDPMTMHPL\Tour_DemoMain\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
 D:\XDPMTMHPL\Tour_DemoMain\BUS\obj\Debug\BUS.dll
 D:\XDPMTMHPL\Tour_DemoMain\BUS\obj\Debug\BUS.pdb
+C:\Users\Hai\Documents\GitHub\XDPMTMHPL\Tour_DemoMain\BUS\bin\Debug\BUS.dll.config
+C:\Users\Hai\Documents\GitHub\XDPMTMHPL\Tour_DemoMain\BUS\bin\Debug\BUS.dll
+C:\Users\Hai\Documents\GitHub\XDPMTMHPL\Tour_DemoMain\BUS\bin\Debug\BUS.pdb
+C:\Users\Hai\Documents\GitHub\XDPMTMHPL\Tour_DemoMain\BUS\bin\Debug\DAO.dll
+C:\Users\Hai\Documents\GitHub\XDPMTMHPL\Tour_DemoMain\BUS\bin\Debug\EF.dll
+C:\Users\Hai\Documents\GitHub\XDPMTMHPL\Tour_DemoMain\BUS\bin\Debug\EntityFramework.dll
+C:\Users\Hai\Documents\GitHub\XDPMTMHPL\Tour_DemoMain\BUS\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Hai\Documents\GitHub\XDPMTMHPL\Tour_DemoMain\BUS\bin\Debug\DAO.pdb
+C:\Users\Hai\Documents\GitHub\XDPMTMHPL\Tour_DemoMain\BUS\bin\Debug\EF.pdb
+C:\Users\Hai\Documents\GitHub\XDPMTMHPL\Tour_DemoMain\BUS\bin\Debug\EntityFramework.xml
+C:\Users\Hai\Documents\GitHub\XDPMTMHPL\Tour_DemoMain\BUS\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Hai\Documents\GitHub\XDPMTMHPL\Tour_DemoMain\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+C:\Users\Hai\Documents\GitHub\XDPMTMHPL\Tour_DemoMain\BUS\obj\Debug\BUS.dll
+C:\Users\Hai\Documents\GitHub\XDPMTMHPL\Tour_DemoMain\BUS\obj\Debug\BUS.pdb
