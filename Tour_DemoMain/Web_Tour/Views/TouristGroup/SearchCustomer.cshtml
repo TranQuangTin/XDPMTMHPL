@@ -8,6 +8,10 @@
         <strong>Thêm Khách Có Sẵn</strong>
     </div>
 </div>
+
+KH <input hidden value="@ViewBag.KH" class="nn-date1" />
+KT <input hidden value="@ViewBag.KT" class="nn-date2" />
+
 <form action="/TouristGroup/AddCus" method="post">
     <input type="text" hidden value="@ViewBag.madoan" name="madoan" />
     <table class="table table-hover table-condensed" id="nn-table">
@@ -127,56 +131,101 @@
 
     });
 </script>
+
 <script>
-        $(function () {
-            $("#keyword").click(function () {
-                var value1 = $("#MaKhachHang").val();
-                var oTable = document.getElementById('nn-table');
-                var rowLength = oTable.rows.length;
-                var c = 0;
-                $.ajax({
-                    url: "/TouristGroup/JsonSearch",
-                    data: { Keyword: value1 },
-                    type: "POST",
-                    success: function (response) {
+    $(function () {
+        $("#keyword").click(function () {
+            var value1 = $("#MaKhachHang").val();
+            var oTable = document.getElementById('nn-table');
+            var rowLength = oTable.rows.length;
+            var c = 0;
 
-                        $(response).each(function (index, item) {
-                            for (i = 1; i < rowLength; i++) {
+            var date1v = $(".nn-date1").attr("value");
+            var date2v = $(".nn-date2").attr("value");
+            var cc = 0;
 
-                                var oCells = oTable.rows.item(i).cells;
+            $.ajax({
+                url: "/TouristGroup/JsonSearch",
+                data: { Keyword: value1 },
+                type: "POST",
+                success: function (response) {
 
-                                var cellLength = oCells.length;
+                    $.ajax({
+                        url: "/TouristGroup/SearchDate",
+                        data: { datasearch: value1 },
+                        type: "POST",
+                        success: function (res) {
+                            $(res).each(function (index, ite) {
 
-                                //loops through each cell in current row
-                                //for (var j = 0; j < cellLength; j++) {
-                                /* get your cell info here item(j) */
-                                var cellVal = oCells.item(5).innerHTML;
-                                //}
-                                if (cellVal == item.PassportNumber) {
-                                    c++;
-                                }
+                                var pattern = /Date\(([^)]+)\)/;
+                                var results0 = pattern.exec(ite.KhoiHanh);
+                                var results = pattern.exec(ite.KetThuc);
+                                var dt0 = new Date(parseFloat(results0[1]));
+                                var dt = new Date(parseFloat(results[1]));
+                                var date1 = dt0.getDate() + "-" + (dt0.getMonth() + 1) + "-" + dt0.getFullYear();
+                                var date2 = dt.getDate() + "-" + (dt.getMonth() + 1) + "-" + dt.getFullYear();
+                                //alert(date1 + " !!!" + date2);
+
+                                var dt0v = new Date(date1v);
+                                var date0vv = dt0v.getDate() + "-" + (dt0v.getMonth() + 1) + "-" + dt0v.getFullYear();
+                                var dt1v = new Date(date2v);
+                                var date1vv = dt1v.getDate() + "-" + (dt1v.getMonth() + 1) + "-" + dt1v.getFullYear();
+
+                                if ((date0vv <= date1 && date1vv <= date2) || (date0vv > date1 && date1vv <= date2) || (date0vv <= date2 && date1vv >= date2)) {
+                                    cc++;
+                                }                              
+                            })
+
+                            if (cc != 0) {
+                                alert("Khách Hàng Đã Đã Có Tour Trong Khoảng Thời Gian Này");
                             }
-                            if (c != 0) {
-                                alert("Khách Hàng Đã Tồn Tại");
-                            }
-                            else if (c == 0) {
-                                tr = $("<tr/>");
-                                tr.append($("<td/>").html(rowLength + "<input name='makhachhang' hidden value='" + item.MaKhachHang + "' type='text' />"));
-                                tr.append($("<td/>").html(item.TenKhachHang));
-                                tr.append($("<td/>").html(item.SDT));
-                                tr.append($("<td/>").html(item.GioiTinh));
-                                tr.append($("<td/>").html(item.DiaChi));
-                                tr.append($("<td/>").html(item.PassportNumber));
-                                tr.append($("<td/>").html("<input value='Mới Đăng Ký' type='button' class='btn btn-default' onclick='deletecus(this)' />"));
-                                $("tbody.result").append(tr);
-                            }
-                        });
 
-                    }
-                });
+                            else {
+                                $(response).each(function (index, item) {
+                                    for (i = 1; i < rowLength; i++) {
+
+
+                                        cc = 1;
+                                        var oCells = oTable.rows.item(i).cells;
+
+                                        var cellLength = oCells.length;
+
+                                        //loops through each cell in current row
+                                        //for (var j = 0; j < cellLength; j++) {
+                                        /* get your cell info here item(j) */
+                                        var cellVal = oCells.item(5).innerHTML;
+                                        //}
+                                        if (cellVal == item.PassportNumber) {
+                                            c++;
+                                        }
+                                    }
+
+                                    if (c != 0) {
+                                        alert("Khách Hàng Đã Tồn Tại");
+                                    }
+
+                                    else if (c == 0) {
+                                         
+                                            tr = $("<tr/>");
+                                            tr.append($("<td/>").html(rowLength));
+                                            tr.append($("<td/>").html(item.TenKhachHang+ "<input name='makhachhang' hidden value='" + item.MaKhachHang + "' type='text' />"));
+                                            tr.append($("<td/>").html(item.SDT));
+                                            tr.append($("<td/>").html(item.GioiTinh));
+                                            tr.append($("<td/>").html(item.DiaChi));
+                                            tr.append($("<td/>").html(item.PassportNumber));
+                                            tr.append($("<td/>").html("<input value='Mới Đăng Ký' type='button' class='btn btn-default' onclick='deletecus(this)' />"));
+                                            $("tbody.result").append(tr);
+                                        }
+                                    
+                                });
+                            }
+                        }
+                    });
+                }
             });
-
         });
+
+    });
 </script>
 <script>
     function deletecus(r) {
@@ -185,18 +234,19 @@
         var table = document.getElementById("nn-table");
 
         for (var z = 1; z < table.rows.length; z++) {
-            //alert("2"+table1.rows[z].cells[0].firstChild.value);
+            
             if (z == i) {
                 document.getElementById("nn-table").deleteRow(z);
                 table.rows.length--;
                 z--;
                 break;
-            }
+            }            
         }
 
         for (var z = 1; z < table.rows.length; z++) {
             table.rows.item(z).cells.item(0).innerHTML = tmp;
             tmp++;
+     
         }
     }
 </script>

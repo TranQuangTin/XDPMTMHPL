@@ -91,17 +91,16 @@ namespace Web_Tour.Controllers
         [HttpPost]
         public ActionResult Insert(DoanDuLich model, int MaTour)
         {
-            if (ModelState.IsValid)
-            {
+            
                 var tour = db.Tours.Find(MaTour);
                 var dem = tour.SoDem;
                 var ngay = tour.SoNgay;
+               
 
                 if (dem > ngay)
                 {
                     model.NgayKetThuc = model.NgayKhoiHanh.AddDays(Convert.ToDouble(dem));
                 }
-
                 else if (dem < ngay)
                 {
                     model.NgayKetThuc = model.NgayKhoiHanh.AddDays(Convert.ToDouble(ngay));
@@ -111,14 +110,15 @@ namespace Web_Tour.Controllers
                 {
                     model.NgayKetThuc = model.NgayKhoiHanh.AddDays(Convert.ToDouble(ngay));
                 }
-
+                var tbn = db.GiaTours.SingleOrDefault(x=>x.MaTour==MaTour);
+                model.MaGia=tbn.MaGia;
+                
                 model.TinhTrang = 1;
                 db.DoanDuLiches.Add(model);
                 db.SaveChanges();
                 Load();
                 return RedirectToAction("Index");
-            }
-            return RedirectToAction("Index");
+                
         }
 
         [HttpGet]
@@ -194,63 +194,90 @@ namespace Web_Tour.Controllers
 
         }
 
-        public ActionResult SearchCustomer(int Id)
+        
+        
+        public ActionResult SearchCustomer(int Id,String date1,String date2)
         {
-            //var model = db.DoanDuLiches.OrderBy(x=>x.MaDoan).Where(x=>x.MaDoan==Id).Select(s => new CusInfo
-            //{
-            //    MaKhachhang = s.KhachTheoDoans.Select(g => new CusInfoA {
-            //        MaKhachHang=g.KhachHang.MaKhachHang,
-            //        TenKhachHang=g.KhachHang.TenKhachHang,
-            //        SDT=g.KhachHang.SDT,
-            //        GioiTinh=g.KhachHang.GioiTinh,
-            //        DiaChi=g.KhachHang.DiaChi,
-            //        PassportNumber=g.KhachHang.PassportNumber,
-            //        TinhTrang=g.KhachHang.TinhTrang
-            //    })
-            //}).ToList();
-            SetViewBagCus();
-            ViewBag.madoan = Id;
-            var model = db.KhachTheoDoans.OrderBy(x => x.MaDoan).Where(x => x.MaDoan == Id).Select(g => new CusInfoA
-            {
-                MaKhachHang = g.KhachHang.MaKhachHang,
-                TenKhachHang = g.KhachHang.TenKhachHang,
-                SDT = g.KhachHang.SDT,
-                GioiTinh = g.KhachHang.GioiTinh,
-                DiaChi = g.KhachHang.DiaChi,
-                PassportNumber = g.KhachHang.PassportNumber,
-                TinhTrang = g.KhachHang.TinhTrang,
-                Chitiet=g.Chitiet,
-                checktinhtrang=g.DoanDuLich.TinhTrang,
-                MaDoan=g.MaDoan
-            }).ToList();
-
-            var check = db.DoanDuLiches.Find(Id);
-            ViewBag.checkstatus = check.TinhTrang;
             
+                //var model = db.DoanDuLiches.OrderBy(x=>x.MaDoan).Where(x=>x.MaDoan==Id).Select(s => new CusInfo
+                //{
+                //    MaKhachhang = s.KhachTheoDoans.Select(g => new CusInfoA {
+                //        MaKhachHang=g.KhachHang.MaKhachHang,
+                //        TenKhachHang=g.KhachHang.TenKhachHang,
+                //        SDT=g.KhachHang.SDT,
+                //        GioiTinh=g.KhachHang.GioiTinh,
+                //        DiaChi=g.KhachHang.DiaChi,
+                //        PassportNumber=g.KhachHang.PassportNumber,
+                //        TinhTrang=g.KhachHang.TinhTrang
+                //    })
+                //}).ToList();
+                SetViewBagCus();
+                ViewBag.madoan = Id;
+                var model = db.KhachTheoDoans.OrderBy(x => x.MaDoan).Where(x => x.MaDoan == Id).Select(g => new CusInfoA
+                {
+                    MaKhachHang = g.KhachHang.MaKhachHang,
+                    TenKhachHang = g.KhachHang.TenKhachHang,
+                    SDT = g.KhachHang.SDT,
+                    GioiTinh = g.KhachHang.GioiTinh,
+                    DiaChi = g.KhachHang.DiaChi,
+                    PassportNumber = g.KhachHang.PassportNumber,
+                    TinhTrang = g.KhachHang.TinhTrang,
+                    Chitiet = g.Chitiet,
+                    checktinhtrang = g.DoanDuLich.TinhTrang,
+                    MaDoan = g.MaDoan
+                }).ToList();
 
-            return View(model);
+                ViewBag.KH = date1;
+                ViewBag.KT = date2;
+                var check = db.DoanDuLiches.Find(Id);
+                ViewBag.checkstatus = check.TinhTrang;
+
+                return View(model);
+            
         }
 
-        [HttpPost]
-        public ActionResult SearchCustomer()
-        {
-            return View();
-        }
+    
 
         public void SetViewBagCus(long? selectedId = null)
         {
             var Name = db.KhachHangs;
-            ViewBag.MaKhachHang = new SelectList(Name, "TenKhachHang", "TenKhachHang", selectedId);
+            ViewBag.MaKhachHang = new SelectList(Name, "MaKhachHang", "TenKhachHang", selectedId);
         }
 
         [HttpPost]
         public ActionResult JSonSearch(String Keyword = "")
         {
+            int Key = Int32.Parse(Keyword);
             var model = db.KhachHangs
-                .Where(p => p.TenKhachHang.Contains(Keyword))
-                .Select(p => new {p.MaKhachHang,p.TenKhachHang,p.SDT,p.GioiTinh,p.DiaChi,p.PassportNumber});
+                .Where(p => p.MaKhachHang==Key)
+                .Select(p => new { p.MaKhachHang, p.TenKhachHang, p.SDT, p.GioiTinh, p.DiaChi, p.PassportNumber });
             return Json(model, JsonRequestBehavior.AllowGet);
         }
+
+
+        [HttpPost]
+        public ActionResult SearchDate(String datasearch = "")
+        {
+            int Key = Int32.Parse(datasearch);
+            var model = db.KhachTheoDoans
+                .Where(p => p.KhachHang.MaKhachHang==Key)
+                .Select(g => new CheckDate
+                {
+                    MaKhachHang = g.KhachHang.MaKhachHang,                   
+                    KhoiHanh = g.DoanDuLich.NgayKhoiHanh,
+                    KetThuc=g.DoanDuLich.NgayKetThuc
+                }).ToList();
+            return Json(model,JsonRequestBehavior.AllowGet);
+        }
+
+        //[HttpPost]
+        //public ActionResult JSonSearch(String Keyword = "")
+        //{
+        //    var model = db.KhachTheoDoans
+        //        .Where(p => p.KhachHang.TenKhachHang.Contains(Keyword))
+        //        .Select(p => new { p.MaKhachHang, p.KhachHang.TenKhachHang, p.KhachHang.SDT, p.KhachHang.GioiTinh, p.KhachHang.DiaChi, p.KhachHang.PassportNumber });
+        //    return Json(model, JsonRequestBehavior.AllowGet);
+        //}
 
         public bool ChangeStatusCustom(int id,int dd)
         {

@@ -5,6 +5,7 @@
     ViewBag.Title = "Index";
     var a = (PagedList.IPagedList<Web_Tour.Models.ReportInfo>)ViewBag.Tour;
 }
+
 <div class="panel panel-default nn-contenttitle text-center">
     <div class="panel-heading">
         <strong>Đoàn Du Lịch</strong>
@@ -44,7 +45,7 @@
             @foreach (var item in a)
             {
                 <tr>
-                    <td><a href="/TouristGroup/SearchCustomer/@item.MaDoan">@item.TenDoan</a></td>
+                    <td><a href="/TouristGroup/SearchCustomer/@item.MaDoan/@Html.FormatValue(item.NgayKhoiHanh,"{0:MM-dd-yyyy}").ToString()/@Html.FormatValue(item.NgayKetThuc,"{0:MM-dd-yyyy}").ToString()">@item.TenDoan</a></td>
                     <td><a href="/TouristGroup/LoadTour/@item.MaTour">@item.TenTour</a></td>
                     <td>@Html.FormatValue(item.NgayKhoiHanh, "{0:dd/MM/yyyy}")</td>
                     <td>@Html.FormatValue(item.NgayKetThuc, "{0:dd/MM/yyyy}")</td>

@@ -41,11 +41,11 @@
     }
 </div>
 @{
-    if (Model != null)
+    if (Model!=null)
     {
         <br />
         <hr />
-        <table class="table table-hover table-responsive">
+        @*<table class="table table-hover table-responsive">
             <thead>
                 <tr class="alert-success">
 
@@ -71,13 +71,14 @@
 
         <br />
         <hr />
-        <br />
+        <br />*@
 
         <table class="table table-hover table-responsive">
             <thead>
                 <tr class="alert-success">
                     <td class="text-center">Tên Đoàn</td>
                     <td class="text-center">Tên Tour</td>
+                    <td class="text-center">Giá Tour</td>
                     <td class="text-center">Ngày Khởi Hành</td>
                     <td class="text-center">Ngày Kết Thúc</td>
                 </tr>
@@ -88,6 +89,7 @@
                     <tr>
                         <td class="text-center">@item.TenDoan</td>
                         <td class="text-center">@item.TenDoan</td>
+                        <td class="text-center">@Html.FormatValue(item.GiaDoan,"{0:#,###}")</td>
                         <td class="text-center">@Html.FormatValue(item.NgayKhoiHanh, "{0:dd-MM-yyyy}")</td>
                         <td class="text-center">@Html.FormatValue(item.NgayKetThuc, "{0:dd-MM-yyyy}")</td>
                     </tr>

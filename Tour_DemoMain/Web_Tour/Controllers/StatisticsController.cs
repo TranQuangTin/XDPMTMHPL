@@ -42,27 +42,26 @@ namespace Web_Tour.Controllers
                         MaDoan = q.DoanDuLich.MaDoan,
                         TenDoan = q.DoanDuLich.TenDoan,
                         MaTour = q.DoanDuLich.MaTour,
-
+                        GiaDoan=q.DoanDuLich.GiaTour.Gia,
                         NgayKhoiHanh = q.DoanDuLich.NgayKhoiHanh,
                         NgayKetThuc = q.DoanDuLich.NgayKetThuc,
                         TenTour = q.DoanDuLich.Tour.TenTour
                     }).ToList();
 
-                int Count = 0;
+               
 
-                ViewBag.Countdata = db.KhachTheoDoans
-                    .OrderBy(x => x.DoanDuLich.NgayKhoiHanh)
-                    //.Where(x=>x.KhachHang.MaKhachHang==MaKhachHang&&x.DoanDuLich.NgayKhoiHanh>=date1&&x.DoanDuLich.NgayKetThuc<=date2)
-                    .Where(x => ((x.KhachHang.MaKhachHang == MaKhachHang && x.DoanDuLich.NgayKhoiHanh >= date1 && x.DoanDuLich.NgayKhoiHanh <= date2) || (x.KhachHang.MaKhachHang == MaKhachHang && x.DoanDuLich.NgayKetThuc <= date2 && x.DoanDuLich.NgayKetThuc >= date1)))
-                    .GroupBy(x => x.MaKhachHang)
-                   .Select(g => new StatisticOrderCount
-                   {
-                       Count = Count + 1,
-                       Sum = g.Sum(p => p.DoanDuLich.GiaTour.Gia),
-                       Min = g.Min(p => p.DoanDuLich.GiaTour.Gia),
-                       Max = g.Max(p => p.DoanDuLich.GiaTour.Gia),
-                       Avg = g.Average(p => p.DoanDuLich.GiaTour.Gia)
-                   });
+                //ViewBag.Countdata = db.KhachTheoDoans
+                //    .OrderBy(x => x.DoanDuLich.NgayKhoiHanh)
+                //    //.Where(x=>x.KhachHang.MaKhachHang==MaKhachHang&&x.DoanDuLich.NgayKhoiHanh>=date1&&x.DoanDuLich.NgayKetThuc<=date2)
+                //    .Where(x => ((x.KhachHang.MaKhachHang == MaKhachHang && x.DoanDuLich.NgayKhoiHanh >= date1 && x.DoanDuLich.NgayKhoiHanh <= date2) || (x.KhachHang.MaKhachHang == MaKhachHang && x.DoanDuLich.NgayKetThuc <= date2 && x.DoanDuLich.NgayKetThuc >= date1)))
+                //    .GroupBy(x => x.MaKhachHang)
+                //   .Select(g => new StatisticOrderCount
+                //   {                      
+                //       Sum = g.Sum(p => p.DoanDuLich.GiaTour.Gia),
+                //       Min = g.Min(p => p.DoanDuLich.GiaTour.Gia),
+                //       Max = g.Max(p => p.DoanDuLich.GiaTour.Gia),
+                //       Avg = g.Average(p => p.DoanDuLich.GiaTour.Gia)
+                //   }).ToList();
 
                 //ViewBag.Gia = db.GiaTours.Where(x=>x.MaTour==(statistic)model.)
                 return View("Index", model);

@@ -21,6 +21,13 @@ namespace Web_Tour
             );
 
             routes.MapRoute(
+                name: "Content Detail News",
+                url: "{controller}/{action}/{id}/{date1}/{date2}",
+                defaults: new { controller = "TouristGroup", action = "SearchCustomer", id = UrlParameter.Optional },
+                namespaces: new[] { "OnlineShop.Controllers" }
+            );
+
+            routes.MapRoute(
               name: "load",
               url: "{controller}/{action}/{id}",
               defaults: new { controller = "TouristGroup", action = "LoadTour", id = UrlParameter.Optional }
