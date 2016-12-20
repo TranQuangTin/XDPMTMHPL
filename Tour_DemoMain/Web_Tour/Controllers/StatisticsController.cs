@@ -33,6 +33,11 @@ namespace Web_Tour.Controllers
             try
             {
                 SetViewBag();
+                if (date1 > date2)
+                {
+                    ModelState.AddModelError("loi", "Khoảng thời gian không tồn tại");
+                    return View("Index");
+                }
                 var model = db.KhachTheoDoans
                     .OrderBy(x => x.DoanDuLich.NgayKhoiHanh)
                     //.Where(x=>x.KhachHang.MaKhachHang==MaKhachHang&&x.DoanDuLich.NgayKhoiHanh>=date1&&x.DoanDuLich.NgayKetThuc<=date2)
@@ -67,7 +72,7 @@ namespace Web_Tour.Controllers
                 return View("Index", model);
             }
             catch
-            {              
+            {
                 return View("Index");
             }
         }

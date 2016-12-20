@@ -30,7 +30,7 @@ namespace Web_Tour.Controllers
             db.KhachHangs.Add(khachhang);
             db.SaveChanges();
             var model = db.KhachHangs.OrderByDescending(x => x.MaKhachHang).ToList();
-            return View("Index",model);
+            return RedirectToAction("Index",model);
         }
     }
 }

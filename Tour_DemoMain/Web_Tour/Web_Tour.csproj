@@ -177,6 +177,7 @@
     <Compile Include="Models\CusInfoA.cs" />
     <Compile Include="Models\CusInfo.cs" />
     <Compile Include="Models\ReportInfo.cs" />
+    <Compile Include="Models\Searchtt.cs" />
     <Compile Include="Models\statistic.cs" />
     <Compile Include="Models\StatisticOrderCount.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -190,6 +191,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="HtmlPage1.html" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -201,6 +203,9 @@
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.10.3.custom.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3.custom.js" />
+    <Content Include="Scripts\jquery-ui-1.10.3.custom.min.js" />
     <Content Include="Scripts\jquery-ui.css" />
     <Content Include="Scripts\jquery-ui.js" />
     <Content Include="Scripts\jquery-ui.min.css" />

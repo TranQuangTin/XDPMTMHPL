@@ -18,25 +18,25 @@ namespace Web_Tour.Controllers
 
         public void Load(string SearchString = "", int page = 1, int pagesize = 10)
         {
-            
-                IQueryable<DoanDuLich> list = db.DoanDuLiches;
-                if (!string.IsNullOrEmpty(SearchString))
-                {
-                    list = list.Where(x => x.TenDoan.Contains(SearchString));
-                }
-                ViewBag.Tour = list.OrderBy(x => x.MaDoan).Select(s => new ReportInfo
-                {
-                    MaTour = s.MaTour,
-                    TenTour = s.Tour.TenTour,
-                    MaDoan = s.MaDoan,
-                    TenDoan = s.TenDoan,
-                    NgayKhoiHanh = s.NgayKhoiHanh,
-                    NgayKetThuc = s.NgayKetThuc,
-                    TinhTrang = s.TinhTrang
 
-                }).ToPagedList(page, pagesize);
-            
-            
+            IQueryable<DoanDuLich> list = db.DoanDuLiches;
+            if (!string.IsNullOrEmpty(SearchString))
+            {
+                list = list.Where(x => x.TenDoan.Contains(SearchString));
+            }
+            ViewBag.Tour = list.OrderBy(x => x.MaDoan).Select(s => new ReportInfo
+            {
+                MaTour = s.MaTour,
+                TenTour = s.Tour.TenTour,
+                MaDoan = s.MaDoan,
+                TenDoan = s.TenDoan,
+                NgayKhoiHanh = s.NgayKhoiHanh,
+                NgayKetThuc = s.NgayKetThuc,
+                TinhTrang = s.TinhTrang
+
+            }).ToPagedList(page, pagesize);
+
+
         }
 
         public ActionResult Index(string SearchString = "", int page = 1, int pagesize = 10)
@@ -68,10 +68,11 @@ namespace Web_Tour.Controllers
         {
             var model = db.Tours.Find(id);
             if (ModelState.IsValid)
-            {                
+            {
                 ViewBag.Mota = model.MoTa;
                 return View(model);
             }
+           
             return View(model);
         }
 
@@ -88,37 +89,45 @@ namespace Web_Tour.Controllers
             return View();
         }
 
+        public int LayMaGia(DoanDuLich t)
+        {
+            GiaTour gt = db.GiaTours.Where(x => x.MaTour == t.MaTour && x.NgayApDung <= t.NgayKhoiHanh).OrderByDescending(x => x.NgayApDung).First();
+            return (int)gt.MaGia;
+        }
+
         [HttpPost]
         public ActionResult Insert(DoanDuLich model, int MaTour)
         {
-            
-                var tour = db.Tours.Find(MaTour);
-                var dem = tour.SoDem;
-                var ngay = tour.SoNgay;
-               
 
-                if (dem > ngay)
-                {
-                    model.NgayKetThuc = model.NgayKhoiHanh.AddDays(Convert.ToDouble(dem));
-                }
-                else if (dem < ngay)
-                {
-                    model.NgayKetThuc = model.NgayKhoiHanh.AddDays(Convert.ToDouble(ngay));
-                }
+            var tour = db.Tours.Find(MaTour);
+            var dem = tour.SoDem;
+            var ngay = tour.SoNgay;
 
-                else if (dem == ngay)
-                {
-                    model.NgayKetThuc = model.NgayKhoiHanh.AddDays(Convert.ToDouble(ngay));
-                }
-                var tbn = db.GiaTours.SingleOrDefault(x=>x.MaTour==MaTour);
-                model.MaGia=tbn.MaGia;
-                
-                model.TinhTrang = 1;
-                db.DoanDuLiches.Add(model);
-                db.SaveChanges();
-                Load();
-                return RedirectToAction("Index");
-                
+
+            int gia = LayMaGia(model);
+
+            if (dem > ngay)
+            {
+                model.NgayKetThuc = model.NgayKhoiHanh.AddDays(Convert.ToDouble(dem));
+            }
+            else if (dem < ngay)
+            {
+                model.NgayKetThuc = model.NgayKhoiHanh.AddDays(Convert.ToDouble(ngay));
+            }
+
+            else if (dem == ngay)
+            {
+                model.NgayKetThuc = model.NgayKhoiHanh.AddDays(Convert.ToDouble(ngay));
+            }
+
+            model.MaGia = gia;
+
+            model.TinhTrang = 1;
+            db.DoanDuLiches.Add(model);
+            db.SaveChanges();
+            Load();
+            return RedirectToAction("Index");
+
         }
 
         [HttpGet]
@@ -135,6 +144,7 @@ namespace Web_Tour.Controllers
             if (ModelState.IsValid)
             {
                 var tour = db.Tours.Find(MaTour);
+                int gia = LayMaGia(model);
                 var dem = tour.SoDem;
                 var ngay = tour.SoNgay;
 
@@ -160,8 +170,9 @@ namespace Web_Tour.Controllers
                 {
                     db.Entry(model).State = System.Data.Entity.EntityState.Modified;
                 }
-                
 
+                model.TinhTrang = 1;
+                model.MaGia = gia;
                 db.SaveChanges();
                 Load();
                 return RedirectToAction("Index");
@@ -194,49 +205,46 @@ namespace Web_Tour.Controllers
 
         }
 
-        
-        
-        public ActionResult SearchCustomer(int Id,String date1,String date2)
+        public ActionResult SearchCustomer(int Id, String date1, String date2)
         {
-            
-                //var model = db.DoanDuLiches.OrderBy(x=>x.MaDoan).Where(x=>x.MaDoan==Id).Select(s => new CusInfo
-                //{
-                //    MaKhachhang = s.KhachTheoDoans.Select(g => new CusInfoA {
-                //        MaKhachHang=g.KhachHang.MaKhachHang,
-                //        TenKhachHang=g.KhachHang.TenKhachHang,
-                //        SDT=g.KhachHang.SDT,
-                //        GioiTinh=g.KhachHang.GioiTinh,
-                //        DiaChi=g.KhachHang.DiaChi,
-                //        PassportNumber=g.KhachHang.PassportNumber,
-                //        TinhTrang=g.KhachHang.TinhTrang
-                //    })
-                //}).ToList();
-                SetViewBagCus();
-                ViewBag.madoan = Id;
-                var model = db.KhachTheoDoans.OrderBy(x => x.MaDoan).Where(x => x.MaDoan == Id).Select(g => new CusInfoA
-                {
-                    MaKhachHang = g.KhachHang.MaKhachHang,
-                    TenKhachHang = g.KhachHang.TenKhachHang,
-                    SDT = g.KhachHang.SDT,
-                    GioiTinh = g.KhachHang.GioiTinh,
-                    DiaChi = g.KhachHang.DiaChi,
-                    PassportNumber = g.KhachHang.PassportNumber,
-                    TinhTrang = g.KhachHang.TinhTrang,
-                    Chitiet = g.Chitiet,
-                    checktinhtrang = g.DoanDuLich.TinhTrang,
-                    MaDoan = g.MaDoan
-                }).ToList();
 
-                ViewBag.KH = date1;
-                ViewBag.KT = date2;
-                var check = db.DoanDuLiches.Find(Id);
-                ViewBag.checkstatus = check.TinhTrang;
+            //var model = db.DoanDuLiches.OrderBy(x=>x.MaDoan).Where(x=>x.MaDoan==Id).Select(s => new CusInfo
+            //{
+            //    MaKhachhang = s.KhachTheoDoans.Select(g => new CusInfoA {
+            //        MaKhachHang=g.KhachHang.MaKhachHang,
+            //        TenKhachHang=g.KhachHang.TenKhachHang,
+            //        SDT=g.KhachHang.SDT,
+            //        GioiTinh=g.KhachHang.GioiTinh,
+            //        DiaChi=g.KhachHang.DiaChi,
+            //        PassportNumber=g.KhachHang.PassportNumber,
+            //        TinhTrang=g.KhachHang.TinhTrang
+            //    })
+            //}).ToList();
+            SetViewBagCus();
+            ViewBag.madoan = Id;
+            var model = db.KhachTheoDoans.OrderBy(x => x.MaDoan).Where(x => x.MaDoan == Id).Select(g => new CusInfoA
+            {
+                MaKhachHang = g.KhachHang.MaKhachHang,
+                TenKhachHang = g.KhachHang.TenKhachHang,
+                SDT = g.KhachHang.SDT,
+                GioiTinh = g.KhachHang.GioiTinh,
+                DiaChi = g.KhachHang.DiaChi,
+                PassportNumber = g.KhachHang.PassportNumber,
+                TinhTrang = g.KhachHang.TinhTrang,
+                Chitiet = g.Chitiet,
+                checktinhtrang = g.DoanDuLich.TinhTrang,
+                MaDoan = g.MaDoan
+            }).ToList();
 
-                return View(model);
-            
-        }
+            ViewBag.KH = date1;
+            ViewBag.KT = date2;
 
-    
+            var check = db.DoanDuLiches.Find(Id);
+            ViewBag.checkstatus = check.TinhTrang;
+
+            return View(model);
+
+        }       
 
         public void SetViewBagCus(long? selectedId = null)
         {
@@ -249,7 +257,7 @@ namespace Web_Tour.Controllers
         {
             int Key = Int32.Parse(Keyword);
             var model = db.KhachHangs
-                .Where(p => p.MaKhachHang==Key)
+                .Where(p => p.MaKhachHang == Key)
                 .Select(p => new { p.MaKhachHang, p.TenKhachHang, p.SDT, p.GioiTinh, p.DiaChi, p.PassportNumber });
             return Json(model, JsonRequestBehavior.AllowGet);
         }
@@ -260,14 +268,14 @@ namespace Web_Tour.Controllers
         {
             int Key = Int32.Parse(datasearch);
             var model = db.KhachTheoDoans
-                .Where(p => p.KhachHang.MaKhachHang==Key)
+                .Where(p => p.KhachHang.MaKhachHang == Key)
                 .Select(g => new CheckDate
                 {
-                    MaKhachHang = g.KhachHang.MaKhachHang,                   
+                    MaKhachHang = g.KhachHang.MaKhachHang,
                     KhoiHanh = g.DoanDuLich.NgayKhoiHanh,
-                    KetThuc=g.DoanDuLich.NgayKetThuc
+                    KetThuc = g.DoanDuLich.NgayKetThuc
                 }).ToList();
-            return Json(model,JsonRequestBehavior.AllowGet);
+            return Json(model, JsonRequestBehavior.AllowGet);
         }
 
         //[HttpPost]
@@ -279,17 +287,17 @@ namespace Web_Tour.Controllers
         //    return Json(model, JsonRequestBehavior.AllowGet);
         //}
 
-        public bool ChangeStatusCustom(int id,int dd)
+        public bool ChangeStatusCustom(int id, int dd)
         {
-            var user = db.KhachTheoDoans.SingleOrDefault(x=>x.MaKhachHang==id&&x.MaDoan==dd);
+            var user = db.KhachTheoDoans.SingleOrDefault(x => x.MaKhachHang == id && x.MaDoan == dd);
             user.Chitiet = !user.Chitiet;
             db.SaveChanges();
             return user.Chitiet;
         }
 
-        public ActionResult UpdateStatusCustom(int id,int dd)
+        public ActionResult UpdateStatusCustom(int id, int dd)
         {
-            var result = ChangeStatusCustom(id,dd);
+            var result = ChangeStatusCustom(id, dd);
             return Json(new
             {
                 status = result
@@ -332,7 +340,7 @@ namespace Web_Tour.Controllers
                 Load();
                 return RedirectToAction("Index");
             }
-            return Redirect("http://localhost:53465/TouristGroup/SearchCustomer/"+madoan);   
+            return Redirect("http://localhost:53465/TouristGroup/SearchCustomer/" + madoan);
         }
     }
 }

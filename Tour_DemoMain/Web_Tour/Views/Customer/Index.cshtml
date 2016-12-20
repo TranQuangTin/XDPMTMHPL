@@ -8,15 +8,22 @@
             <strong>Khách Hàng</strong>
         </div>
     </div>
+
+    <div class="pull-right" style="margin-right:0px;">
+        <div>
+            <a href="/Customer/Insert" class="btn btn-warning">Thêm Khách Hàng</a>
+        </div>
+    </div>
+    <br />
+    <br />
     <table class="table table-hover table-responsive">
         <thead>
             <tr class="alert-success">
                 <td class="text-center">Tên Đoàn</td>
                 <td class="text-center">Số Điện Thoại</td>
                 <td class="text-center">Giới tính</td>
-                <td class="text-center">Đại Chỉ</td>
-                <td class="text-center">Số Passport</td>
-                <td class="text-center">Tình Trạng</td>
+                <td class="text-center">Địa Chỉ</td>
+                <td class="text-center">Số CMND</td>
             </tr>
         </thead>
         <tbody>
@@ -28,7 +35,6 @@
                     <td class="text-center">@item.GioiTinh</td>
                     <td class="text-center">@item.DiaChi</td>
                     <td class="text-center">@item.PassportNumber</td>
-                    <td class="text-center">@(item.TinhTrang ? "Chưa Có Đoàn" : "Đã Có Đoàn")</td>
                 </tr>
             }
         </tbody>

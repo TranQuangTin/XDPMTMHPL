@@ -9,8 +9,9 @@
     </div>
 </div>
 
-KH <input hidden value="@ViewBag.KH" class="nn-date1" />
-KT <input hidden value="@ViewBag.KT" class="nn-date2" />
+<input hidden value="@ViewBag.KH" class="nn-date1" />
+<input hidden value="@ViewBag.KT" class="nn-date2" />
+
 
 <form action="/TouristGroup/AddCus" method="post">
     <input type="text" hidden value="@ViewBag.madoan" name="madoan" />
@@ -144,6 +145,8 @@ KT <input hidden value="@ViewBag.KT" class="nn-date2" />
             var date2v = $(".nn-date2").attr("value");
             var cc = 0;
 
+
+
             $.ajax({
                 url: "/TouristGroup/JsonSearch",
                 data: { Keyword: value1 },
@@ -154,7 +157,8 @@ KT <input hidden value="@ViewBag.KT" class="nn-date2" />
                         url: "/TouristGroup/SearchDate",
                         data: { datasearch: value1 },
                         type: "POST",
-                        success: function (res) {
+                        success: function (res) {                       
+
                             $(res).each(function (index, ite) {
 
                                 var pattern = /Date\(([^)]+)\)/;
@@ -173,7 +177,7 @@ KT <input hidden value="@ViewBag.KT" class="nn-date2" />
 
                                 if ((date0vv <= date1 && date1vv <= date2) || (date0vv > date1 && date1vv <= date2) || (date0vv <= date2 && date1vv >= date2)) {
                                     cc++;
-                                }                              
+                                }
                             })
 
                             if (cc != 0) {
@@ -205,18 +209,18 @@ KT <input hidden value="@ViewBag.KT" class="nn-date2" />
                                     }
 
                                     else if (c == 0) {
-                                         
-                                            tr = $("<tr/>");
-                                            tr.append($("<td/>").html(rowLength));
-                                            tr.append($("<td/>").html(item.TenKhachHang+ "<input name='makhachhang' hidden value='" + item.MaKhachHang + "' type='text' />"));
-                                            tr.append($("<td/>").html(item.SDT));
-                                            tr.append($("<td/>").html(item.GioiTinh));
-                                            tr.append($("<td/>").html(item.DiaChi));
-                                            tr.append($("<td/>").html(item.PassportNumber));
-                                            tr.append($("<td/>").html("<input value='Mới Đăng Ký' type='button' class='btn btn-default' onclick='deletecus(this)' />"));
-                                            $("tbody.result").append(tr);
-                                        }
-                                    
+
+                                        tr = $("<tr/>");
+                                        tr.append($("<td/>").html(rowLength));
+                                        tr.append($("<td/>").html(item.TenKhachHang + "<input name='makhachhang' hidden value='" + item.MaKhachHang + "' type='text' />"));
+                                        tr.append($("<td/>").html(item.SDT));
+                                        tr.append($("<td/>").html(item.GioiTinh));
+                                        tr.append($("<td/>").html(item.DiaChi));
+                                        tr.append($("<td/>").html(item.PassportNumber));
+                                        tr.append($("<td/>").html("<input value='Mới Đăng Ký' type='button' class='btn btn-default' onclick='deletecus(this)' />"));
+                                        $("tbody.result").append(tr);
+                                    }
+
                                 });
                             }
                         }
@@ -234,19 +238,19 @@ KT <input hidden value="@ViewBag.KT" class="nn-date2" />
         var table = document.getElementById("nn-table");
 
         for (var z = 1; z < table.rows.length; z++) {
-            
+
             if (z == i) {
                 document.getElementById("nn-table").deleteRow(z);
                 table.rows.length--;
                 z--;
                 break;
-            }            
+            }
         }
 
         for (var z = 1; z < table.rows.length; z++) {
             table.rows.item(z).cells.item(0).innerHTML = tmp;
             tmp++;
-     
+
         }
     }
 </script>

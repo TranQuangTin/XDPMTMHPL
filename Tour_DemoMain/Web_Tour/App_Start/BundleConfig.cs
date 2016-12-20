@@ -20,16 +20,19 @@ namespace Web_Tour
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js",
-                      "~/Scripts/respond.js",
-                      "~/Scripts/System.js"
-                      ));
+                "~/Scripts/bootstrap.js",
+                "~/Scripts/respond.js",
+                "~/Scripts/System.js",
+                "~/Scripts/jquery-1.10.2.min.js",
+                "~/Scripts/jquery-ui-1.10.3.custom.js",
+                "~/Scripts/jquery-ui-1.10.3.custom.min.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
                       "~/Content/style.css",
-                      "~/Content/nhatnghe.css"));
+                      "~/Content/nhatnghe.css",
+                      "~/Scripts/jquery-ui-1.10.3.custom.css"));
         }
     }
 }
