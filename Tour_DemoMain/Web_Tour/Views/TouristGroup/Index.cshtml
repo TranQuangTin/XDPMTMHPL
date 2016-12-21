@@ -14,6 +14,15 @@
 <div class="form-group">
     @using (Html.BeginForm("Index", "TouristGroup", FormMethod.Post))
     {
+
+
+
+        <div class="form-group row " style="margin-left:650px;margin-bottom:-10px">
+            <label class="control-label col-md-4">Hiển thị tất cả</label>
+            <div class="col-md-8">
+                @Html.CheckBox("haha", false, new { @class = "my-button" })
+            </div>
+        </div>
         <div class="row" style="margin-right:-200px;">
             <div class="col-md-6">  </div>
             <div class="col-md-6 row">
@@ -29,7 +38,7 @@
     }
 </div>
 <div class="my-dialog" title="Xác nhận sửa tình trạng">
-    Bạn có chắc muốn sửa tình trạng 
+    Bạn có chắc muốn sửa tình trạng
 </div>
 
 
@@ -57,34 +66,36 @@
                     <td>@Html.FormatValue(item.NgayKhoiHanh, "{0:dd/MM/yyyy}")</td>
                     <td>@Html.FormatValue(item.NgayKetThuc, "{0:dd/MM/yyyy}")</td>
 
-                    @if (item.TinhTrang == 1)
+                    @if (item.TinhTrang == 1 && item.NgayKetThuc > ViewBag.d)
                     {
                         <td>
                             <a href="#" data-id="@item.MaDoan" class="btn-war">
-                                <span>Đã Đăng Ký</span></a>
-                        </td>
-                        <td><a href="/TouristGroup/Update/@item.MaDoan">Sửa</a></td>
-                    }
-                    else if (item.TinhTrang == 2)
-                    {
-                        <td>
-                            <a href="#" data-id="@item.MaDoan" class="btn-war">
-                                <span>Hủy</span></a>
-                        </td>
-                        <td><a href="/TouristGroup/Update/@item.MaDoan">Sửa</a></td>
-                    }
-                    else if (item.TinhTrang == 3)
-                    {
-                        <td>
-                            <a  data-id="@item.MaDoan" class="btn-wr">
-                                <span class="alert-danger">Đã Kết Thúc</span>                              
+                                <span>Đã Đăng Ký</span>
                             </a>
                         </td>
-                      
+                        <td><a href="/TouristGroup/Update/@item.MaDoan">Sửa</a></td>
                     }
-                        @*<td>@Html.ActionLink("Edit","LoadTour", "TouristGroup",new { id=@item.MaDoan})</td>*@
-                    </tr>
+                    else if (item.TinhTrang == 2 && item.NgayKetThuc > ViewBag.d)
+                    {
+                        <td>
+                            <a href="#" data-id="@item.MaDoan" class="btn-war">
+                                <span>Hủy</span>
+                            </a>
+                        </td>
+                        @*<td><a href="/TouristGroup/Update/@item.MaDoan">Sửa</a></td>*@
                     }
+                    else if ((item.TinhTrang == 1 && item.NgayKetThuc <= ViewBag.d) || (item.TinhTrang == 2 && item.NgayKetThuc <= ViewBag.d))
+                    {
+                        <td>
+                            <a data-id="@item.MaDoan" class="btn-wr">
+                                <span class="alert-danger">Đã Kết Thúc</span>
+                            </a>
+                        </td>
+
+                    }
+                    @*<td>@Html.ActionLink("Edit","LoadTour", "TouristGroup",new { id=@item.MaDoan})</td>*@
+                </tr>
+            }
         </tbody>
     </table>
 
@@ -92,7 +103,7 @@
         @Html.PagedListPager(a, page => Url.Action("Index", new { page, @searchString = @ViewBag.SeachString }))
     </div>
 
-    
+
 </div>
 
 <script>
@@ -104,9 +115,9 @@
     });
 </script>
 <script>
-  
+
     $(function () {
-        $stt="";
+        $stt = "";
         $(".btn-war").click(function (e) {
             e.preventDefault();
             $stt = $(this);
@@ -117,7 +128,7 @@
             width: 500, autoOpen: false, modal: true, show: 'blind', hide: 'explode',
             buttons: {
                 "Chấp nhận": function () {
-                    
+
                     var btn = $stt;
                     var id = btn.data('id');
                     $.ajax({
@@ -128,17 +139,19 @@
                         success: function (response) {
                             if (response.status == 1) {
                                 btn.text('Đã Đăng Ký');
+                                location.reload();
                                 return false;
                             }
                             else if (response.status == 2) {
                                 btn.text('Hủy');
+                                location.reload();
                                 return false;
-                            }                          
+                            }
                         }
 
                     });
                     $(".my-dialog").dialog("close");
-                    
+
                 },
                 "Hủy": function () {
                     $(".my-dialog").dialog("close");
@@ -147,23 +160,23 @@
         });
         //$(".btn-war").off("click").on("click", function (e) {
         //    e.preventDefault();
-            //var btn = $(this);
-            //var id = btn.data('id');
-            //$.ajax({
-            //    url: "/TouristGroup/UpdateStatus",
-            //    data: { id: id },
-            //    datatype: "json",
-            //    type: "POST",
-            //    success: function (response) {
-            //        if (response.status == 1) {
-            //            btn.text('Đã Đăng Ký');
-            //        }
-            //        else if(response.status==2) {
-            //            btn.text('Hủy');
-            //        }
+        //var btn = $(this);
+        //var id = btn.data('id');
+        //$.ajax({
+        //    url: "/TouristGroup/UpdateStatus",
+        //    data: { id: id },
+        //    datatype: "json",
+        //    type: "POST",
+        //    success: function (response) {
+        //        if (response.status == 1) {
+        //            btn.text('Đã Đăng Ký');
+        //        }
+        //        else if(response.status==2) {
+        //            btn.text('Hủy');
+        //        }
 
-            //    }
-            //});
+        //    }
+        //});
         //});
     });
 </script>

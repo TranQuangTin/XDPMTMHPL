@@ -73,7 +73,6 @@ C:\Users\Hai\Documents\GitHub\XDPMTMHPL\Tour_DemoMain\EF\bin\Debug\EntityFramewo
 C:\Users\Hai\Documents\GitHub\XDPMTMHPL\Tour_DemoMain\EF\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Hai\Documents\GitHub\XDPMTMHPL\Tour_DemoMain\EF\bin\Debug\PagedList.xml
 C:\Users\Hai\Documents\GitHub\XDPMTMHPL\Tour_DemoMain\EF\bin\Debug\PagedList.Mvc.xml
-C:\Users\Hai\Documents\GitHub\XDPMTMHPL\Tour_DemoMain\EF\obj\Debug\EF.csprojResolveAssemblyReference.cache
 C:\Users\Hai\Documents\GitHub\XDPMTMHPL\Tour_DemoMain\EF\obj\Debug\EF.dll
 C:\Users\Hai\Documents\GitHub\XDPMTMHPL\Tour_DemoMain\EF\obj\Debug\EF.pdb
 D:\XDPMTMHPL\XDPMTMHPL\Tour_DemoMain\EF\bin\Debug\EF.dll.config

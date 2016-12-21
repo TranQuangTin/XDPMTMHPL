@@ -7,6 +7,7 @@ using EF;
 using PagedList;
 using Web_Tour.Models;
 using System.Globalization;
+using System.Net;
 
 namespace Web_Tour.Controllers
 {
@@ -16,13 +17,42 @@ namespace Web_Tour.Controllers
         TourDuLichEntities db = new TourDuLichEntities();
         // GET: TouristGroup
 
-        public void Load(string SearchString = "", int page = 1, int pagesize = 10)
+        public static DateTime GetNistTime()
         {
+            var myHttpWebRequest = (HttpWebRequest)WebRequest.Create("http://www.microsoft.com");
+            var response = myHttpWebRequest.GetResponse();
+            string todaysDates = response.Headers["date"];
+            DateTime dateTime = DateTime.ParseExact(todaysDates, "ddd, dd MMM yyyy HH:mm:ss 'GMT'", CultureInfo.InvariantCulture.DateTimeFormat, DateTimeStyles.AssumeUniversal);
+            return dateTime;
+        }
 
+        public void Load(string SearchString = "", int page = 1, int pagesize = 10, Boolean haha=false)
+        {
+            DateTime gg = GetNistTime();
             IQueryable<DoanDuLich> list = db.DoanDuLiches;
             if (!string.IsNullOrEmpty(SearchString))
             {
-                list = list.Where(x => x.TenDoan.Contains(SearchString));
+                if (haha == false)
+                {
+                    list = list.Where(x => x.TenDoan.Contains(SearchString) && x.NgayKetThuc > gg);
+                }
+                else if (haha == true)
+                {
+                    list = list.Where(x => x.TenDoan.Contains(SearchString));
+                }
+            }
+            else
+            {
+                if (haha == false)
+                {
+                    list = list.Where(x => x.NgayKetThuc > gg);
+                }
+
+                else if (haha == true)
+                {
+                    list = list;
+                }
+
             }
             ViewBag.Tour = list.OrderBy(x => x.MaDoan).Select(s => new ReportInfo
             {
@@ -41,12 +71,13 @@ namespace Web_Tour.Controllers
 
         }
 
-        public ActionResult Index(string SearchString = "", int page = 1, int pagesize = 10)
+        public ActionResult Index(string SearchString = "", int page = 1, int pagesize = 10, Boolean haha=false)
         {
             if (ModelState.IsValid)
             {
-                Load(SearchString, page, pagesize);
+                Load(SearchString, page, pagesize,haha);
                 ViewBag.SearchString = SearchString;
+                ViewBag.d = GetNistTime();
                 return View();
                 //ViewBag.Group = db.DoanDuLiches.ToList();
                 //ViewBag.Group = db.DoanDuLiches.Select(s => new ReportInfo
@@ -74,13 +105,20 @@ namespace Web_Tour.Controllers
                 ViewBag.Mota = model.MoTa;
                 return View(model);
             }
-           
+
             return View(model);
         }
 
         public void SetViewBag(long? selectedId = null)
         {
-            var Name = db.Tours;
+
+            var Name = db.GiaTours.Where(x => x.Tour.TinhTrang == true).Select(y => new loadtourcombobox
+            {
+                MaTour = y.Tour.MaTour,
+                TenTour = y.Tour.TenTour
+            }).Distinct().ToList();
+
+
             ViewBag.MaTour = new SelectList(Name, "MaTour", "TenTour", selectedId);
         }
 
@@ -141,52 +179,58 @@ namespace Web_Tour.Controllers
         }
 
         [HttpPost]
-        public ActionResult Update(DoanDuLich model, int MaTour, Boolean Status)
+        public ActionResult Update(DoanDuLich model, int MaTour/*, Boolean Status*/)
         {
             try
             {
-                var tour = db.Tours.Find(MaTour);
-                int gia = LayMaGia(model);
-                var dem = tour.SoDem;
-                var ngay = tour.SoNgay;
-                model.TinhTrang = model.TinhTrang;
-                model.MaGia = gia;
-                if (dem > ngay)
-                {
-                    model.NgayKetThuc = model.NgayKhoiHanh.AddDays(Convert.ToDouble(dem));
-                }
-                else if (dem < ngay)
-                {
-                    model.NgayKetThuc = model.NgayKhoiHanh.AddDays(Convert.ToDouble(ngay));
-                }
-                else if (dem == ngay)
-                {
-                    model.NgayKetThuc = model.NgayKhoiHanh.AddDays(Convert.ToDouble(ngay));
-                }
 
-                if (Status == true)
+                DateTime gg = GetNistTime();
+
+                if (model.NgayKhoiHanh <= gg)
                 {
-                    model.TinhTrang = 3;
+                    var tour = db.Tours.Find(MaTour);
+                    int gia = LayMaGia(model);
+                    var dem = tour.SoDem;
+                    var ngay = tour.SoNgay;
+                    model.TinhTrang = model.TinhTrang;
+                    model.MaGia = gia;
+                    if (dem > ngay)
+                    {
+                        model.NgayKetThuc = model.NgayKhoiHanh.AddDays(Convert.ToDouble(dem));
+                    }
+                    else if (dem < ngay)
+                    {
+                        model.NgayKetThuc = model.NgayKhoiHanh.AddDays(Convert.ToDouble(ngay));
+                    }
+                    else if (dem == ngay)
+                    {
+                        model.NgayKetThuc = model.NgayKhoiHanh.AddDays(Convert.ToDouble(ngay));
+                    }
+
+                    //if (Status == true)
+                    //{
+                    //    model.TinhTrang = 3;
+                    //    db.Entry(model).State = System.Data.Entity.EntityState.Modified;
+                    //    db.SaveChanges();
+                    //    Load();
+                    //    return RedirectToAction("Index");
+                    //}
+                    //else
+                    //{
+
+
                     db.Entry(model).State = System.Data.Entity.EntityState.Modified;
                     db.SaveChanges();
-                    Load();
+                    //}
+                    //model.MaGia = gia;
                     return RedirectToAction("Index");
                 }
-                else
-                {
-                    db.Entry(model).State = System.Data.Entity.EntityState.Modified;
-                    db.SaveChanges();
-                }
-                //model.MaGia = gia;
-                return RedirectToAction("Index");
-
+                return RedirectToAction("Update/" + model.MaDoan, "TouristGroup");
             }
             catch
             {
                 return RedirectToAction("Index");
             }
-            
-           
         }
 
         public int ChangeStatus(int id)
@@ -253,7 +297,7 @@ namespace Web_Tour.Controllers
 
             return View(model);
 
-        }       
+        }
 
         public void SetViewBagCus(long? selectedId = null)
         {

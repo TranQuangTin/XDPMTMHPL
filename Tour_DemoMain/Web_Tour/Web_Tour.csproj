@@ -176,6 +176,7 @@
     <Compile Include="Models\CheckDate.cs" />
     <Compile Include="Models\CusInfoA.cs" />
     <Compile Include="Models\CusInfo.cs" />
+    <Compile Include="Models\loadtourcombobox.cs" />
     <Compile Include="Models\ReportInfo.cs" />
     <Compile Include="Models\Searchtt.cs" />
     <Compile Include="Models\statistic.cs" />
