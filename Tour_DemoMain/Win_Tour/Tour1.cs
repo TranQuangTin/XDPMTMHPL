@@ -25,7 +25,13 @@ namespace Win_Tour
         }
         private void HienThiTour()
         {
-            gridControl1.DataSource = new BindingList<Tour>(TourBUS.DSTour);
+            try
+            {
+                if (checkBox1.Checked == true)
+                    gridControl1.DataSource = new BindingList<Tour>(TourBUS.DSTour);
+                else gridControl1.DataSource = new BindingList<Tour>(TourBUS.DSTour.Where(x => x.TinhTrang == true).ToList());
+            }
+            catch { }
         }
 
         private void Tour1_Load(object sender, EventArgs e)
@@ -155,6 +161,27 @@ namespace Win_Tour
             HienThiDiaDiem();
             gridView2_FocusedRowChanged(sender, e);
             gridView3_FocusedRowChanged(sender, e);
+            TourBUS tb=new TourBUS();
+            if(tb.KiemTraTinhTrang(matuor))
+            {
+                simpleButton1.Enabled = true;
+                simpleButton2.Enabled = true;
+                simpleButton5.Enabled = true;
+                simpleButton3.Enabled = true;
+                simpleButton4.Enabled = true;
+                simpleButton6.Enabled = true;
+                simpleButton12.Enabled = true;
+            }
+            else
+            {
+                simpleButton1.Enabled = false;
+                simpleButton2.Enabled = false;
+                simpleButton5.Enabled = false;
+                simpleButton3.Enabled = false;
+                simpleButton4.Enabled = false;
+                simpleButton6.Enabled = false;
+                simpleButton12.Enabled = false;
+            }
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
@@ -501,6 +528,37 @@ namespace Win_Tour
             {
                 e.DisplayText = Convert.ToString(e.RowHandle + 1);
             }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true)
+            {
+                try
+                {
+                    gridControl1.DataSource = new BindingList<Tour>(TourBUS.DSTour);
+                    simpleButton13.Enabled = true;
+                }
+                catch { }
+            }
+            else
+            {
+                try
+                {
+                    gridControl1.DataSource = new BindingList<Tour>(TourBUS.DSTour.Where(x => x.TinhTrang == true).ToList());
+                    simpleButton13.Enabled = false;
+                }
+                catch { }
+            }
+        }
+
+        private void simpleButton13_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Kích hoạt thành công!");
+            TourBUS tb=new TourBUS();
+            TourBUS.DSTour.RemoveAll(x => x.MaTour == matuor);
+            TourBUS.DSTour.Add(tb.SuaTinhTrang(matuor));
+            HienThiTour();
         }
     }
 }

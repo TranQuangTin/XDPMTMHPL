@@ -11,7 +11,7 @@ namespace DAO
     {
         public static List<Tour> LoadTour()
         {
-            return tdl.Tours.Where(x => x.TinhTrang == true).ToList();
+            return tdl.Tours.ToList();
             //câu này làm chậm
             
         }
@@ -62,6 +62,18 @@ namespace DAO
         {
             tdl.Tours.Add(tr);
             tdl.SaveChanges();
+        }
+        public Tour SuaTinhTrang(int matour)
+        {
+            Tour tt = tdl.Tours.Find(matour);
+            tt.TinhTrang = true;
+            tdl.SaveChanges();
+            return tt;
+        }
+        public bool KiemTraTinhTrang(int matour)
+        {
+            Tour tt = tdl.Tours.Find(matour);
+            return (bool)tt.TinhTrang;
         }
     }
 }

@@ -41,5 +41,13 @@ namespace BUS
         {
             td.VHHTour(matour);
         }
+        public Tour SuaTinhTrang(int matour)
+        {
+            return td.SuaTinhTrang(matour);
+        }
+        public bool KiemTraTinhTrang(int matour)
+        {
+            return td.KiemTraTinhTrang(matour);
+        }
     }
 }
