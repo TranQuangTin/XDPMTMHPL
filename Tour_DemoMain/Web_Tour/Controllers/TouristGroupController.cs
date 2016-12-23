@@ -138,35 +138,44 @@ namespace Web_Tour.Controllers
         [HttpPost]
         public ActionResult Insert(DoanDuLich model, int MaTour)
         {
+            DateTime gg = GetNistTime();
 
-            var tour = db.Tours.Find(MaTour);
-            var dem = tour.SoDem;
-            var ngay = tour.SoNgay;
-
-
-            int gia = LayMaGia(model);
-
-            if (dem > ngay)
+            if(model.NgayKhoiHanh > gg)
             {
-                model.NgayKetThuc = model.NgayKhoiHanh.AddDays(Convert.ToDouble(dem));
+                var tour = db.Tours.Find(MaTour);
+                var dem = tour.SoDem;
+                var ngay = tour.SoNgay;
+
+
+                int gia = LayMaGia(model);
+
+                if (dem > ngay)
+                {
+                    model.NgayKetThuc = model.NgayKhoiHanh.AddDays(Convert.ToDouble(dem));
+                }
+                else if (dem < ngay)
+                {
+                    model.NgayKetThuc = model.NgayKhoiHanh.AddDays(Convert.ToDouble(ngay));
+                }
+
+                else if (dem == ngay)
+                {
+                    model.NgayKetThuc = model.NgayKhoiHanh.AddDays(Convert.ToDouble(ngay));
+                }
+
+                model.MaGia = gia;
+
+                model.TinhTrang = 1;
+                db.DoanDuLiches.Add(model);
+                db.SaveChanges();
+                Load();
+                return RedirectToAction("Index");
+
             }
-            else if (dem < ngay)
+            else
             {
-                model.NgayKetThuc = model.NgayKhoiHanh.AddDays(Convert.ToDouble(ngay));
+                return RedirectToAction("Insert");
             }
-
-            else if (dem == ngay)
-            {
-                model.NgayKetThuc = model.NgayKhoiHanh.AddDays(Convert.ToDouble(ngay));
-            }
-
-            model.MaGia = gia;
-
-            model.TinhTrang = 1;
-            db.DoanDuLiches.Add(model);
-            db.SaveChanges();
-            Load();
-            return RedirectToAction("Index");
 
         }
 
