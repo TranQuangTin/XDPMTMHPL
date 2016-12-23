@@ -88,4 +88,3 @@ D:\XDPMTMHPL\XDPMTMHPL\Tour_DemoMain\EF\bin\Debug\PagedList.xml
 D:\XDPMTMHPL\XDPMTMHPL\Tour_DemoMain\EF\bin\Debug\PagedList.Mvc.xml
 D:\XDPMTMHPL\XDPMTMHPL\Tour_DemoMain\EF\obj\Debug\EF.dll
 D:\XDPMTMHPL\XDPMTMHPL\Tour_DemoMain\EF\obj\Debug\EF.pdb
-C:\Users\Hai\Documents\GitHub\XDPMTMHPL\Tour_DemoMain\EF\obj\Debug\EF.csprojResolveAssemblyReference.cache

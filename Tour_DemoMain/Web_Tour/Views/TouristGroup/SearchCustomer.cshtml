@@ -9,8 +9,9 @@
     </div>
 </div>
 
-<input hidden value="@ViewBag.KH" class="nn-date1" />
-<input hidden value="@ViewBag.KT" class="nn-date2" />
+<input  value="@ViewBag.KH" class="nn-date1" />
+<input  value="@ViewBag.KT" class="nn-date2" />
+<input  value="@Html.FormatValue(ViewBag.XET,"{0:MM-dd-yyyy}")" class="nn-XET" />
 
 
 <form action="/TouristGroup/AddCus" method="post">
@@ -40,20 +41,21 @@
                         <td>@item.GioiTinh</td>
                         <td>@item.DiaChi</td>
                         <td>@item.PassportNumber</td>
-                        @if (@item.checktinhtrang == 1 || @item.checktinhtrang == 2)
+                        @if (ViewBag.XET <= DateTime.Parse(ViewBag.KH))
                         {
                             <td><a href="#" data-id="@item.MaKhachHang" data-dd="@item.MaDoan" class="btn-war btn btn-default">@(item.Chitiet ? "Đã Đăng Ký" : "Hủy Đăng Ký")</a></td>
                         }
-                        else if (@item.checktinhtrang == 3)
+                        else
                         {
-                            <td><a href="#" data-id="@item.MaKhachHang" data-dd="@item.MaDoan" class="btn-warnon btn btn-default">@(item.Chitiet ? "Đã Đăng Ký" : "Hủy Đăng Ký")</a></td>
+                            <td><a href="#"  class="btn-war btn btn-default">Đang đi</a></td>
                         }
+
 
                     </tr>
                 } }
         </tbody>
     </table>
-    @if (ViewBag.checkstatus == 1)
+    @if (ViewBag.XET <= DateTime.Parse(ViewBag.KH))
     {
         <div class="pull-right" style="margin-bottom:10px;">
             <a href="/Customer/Index" class="btn btn-primary">
@@ -124,16 +126,27 @@
     });
 </script>
 <script>
+    var date1v = $(".nn-date1").attr("value");
+    var dt0v = new Date(date1v);
+    var date0vv = dt0v.getDate() + "-" + (dt0v.getMonth() + 1) + "-" + dt0v.getFullYear();
+
+    var XET = $(".nn-XET").attr("value");
+    var dt0vXET = new Date(XET);
+    var date0vvXET = dt0vXET.getDate() + "-" + (dt0vXET.getMonth() + 1) + "-" + dt0vXET.getFullYear();
     $(function () {
         $(".btn-warnon").click(function () {
-            alert("Đoàn Đã Kết Thúc");
-            return false;
+            if (date0vvXET >= date0vv) {
+                alert("Đoàn Đã Kết Thúc");
+                return false;
+            }
         });
 
     });
 </script>
 
+
 <script>
+
     $(function () {
         $("#keyword").click(function () {
             var value1 = $("#MaKhachHang").val();
@@ -143,90 +156,102 @@
 
             var date1v = $(".nn-date1").attr("value");
             var date2v = $(".nn-date2").attr("value");
+            var dt0v = new Date(date1v);
+            var date0vv = dt0v.getDate() + "-" + (dt0v.getMonth() + 1) + "-" + dt0v.getFullYear();
+            var dt1v = new Date(date2v);
+            var date1vv = dt1v.getDate() + "-" + (dt1v.getMonth() + 1) + "-" + dt1v.getFullYear();
+
+
+            var XET = $(".nn-XET").attr("value");
+            var dt0vXET = new Date(XET);
+            var date0vvXET = dt0vXET.getDate() + "-" + (dt0vXET.getMonth() + 1) + "-" + dt0vXET.getFullYear();
             var cc = 0;
 
+            if (date0vvXET >= date0vv) {
+                alert("Đoàn đang đi không thể thêm");
+            }
+            else {
+                $.ajax({
+                    url: "/TouristGroup/JsonSearch",
+                    data: { Keyword: value1 },
+                    type: "POST",
+                    success: function (response) {
+
+                        $.ajax({
+                            url: "/TouristGroup/SearchDate",
+                            data: { datasearch: value1 },
+                            type: "POST",
+                            success: function (res) {
+
+                                $(res).each(function (index, ite) {
+
+                                    var pattern = /Date\(([^)]+)\)/;
+                                    var results0 = pattern.exec(ite.KhoiHanh);
+                                    var results = pattern.exec(ite.KetThuc);
+                                    var dt0 = new Date(parseFloat(results0[1]));
+                                    var dt = new Date(parseFloat(results[1]));
+                                    var date1 = dt0.getDate() + "-" + (dt0.getMonth() + 1) + "-" + dt0.getFullYear();
+                                    var date2 = dt.getDate() + "-" + (dt.getMonth() + 1) + "-" + dt.getFullYear();
+                                    //alert(date1 + " !!!" + date2);
 
 
-            $.ajax({
-                url: "/TouristGroup/JsonSearch",
-                data: { Keyword: value1 },
-                type: "POST",
-                success: function (response) {
 
-                    $.ajax({
-                        url: "/TouristGroup/SearchDate",
-                        data: { datasearch: value1 },
-                        type: "POST",
-                        success: function (res) {                       
+                                    if ((date1 > date0vv && date1 < date1vv) || (date2 > date0vv && date2 < date1vv) || date1 == date0vv || date1 == date1vv || date2 == date1vv || date2 == date0vv) {
+                                        cc++;
+                                    }
+                                })
 
-                            $(res).each(function (index, ite) {
-
-                                var pattern = /Date\(([^)]+)\)/;
-                                var results0 = pattern.exec(ite.KhoiHanh);
-                                var results = pattern.exec(ite.KetThuc);
-                                var dt0 = new Date(parseFloat(results0[1]));
-                                var dt = new Date(parseFloat(results[1]));
-                                var date1 = dt0.getDate() + "-" + (dt0.getMonth() + 1) + "-" + dt0.getFullYear();
-                                var date2 = dt.getDate() + "-" + (dt.getMonth() + 1) + "-" + dt.getFullYear();
-                                //alert(date1 + " !!!" + date2);
-
-                                var dt0v = new Date(date1v);
-                                var date0vv = dt0v.getDate() + "-" + (dt0v.getMonth() + 1) + "-" + dt0v.getFullYear();
-                                var dt1v = new Date(date2v);
-                                var date1vv = dt1v.getDate() + "-" + (dt1v.getMonth() + 1) + "-" + dt1v.getFullYear();
-
-                                if ((date0vv <= date1 && date1vv <= date2) || (date0vv > date1 && date1vv <= date2) || (date0vv <= date2 && date1vv >= date2)) {
-                                    cc++;
+                                if (cc != 0) {
+                                    alert("Khách Hàng Đã Đã Có Tour Trong Khoảng Thời Gian Này");
                                 }
-                            })
 
-                            if (cc != 0) {
-                                alert("Khách Hàng Đã Đã Có Tour Trong Khoảng Thời Gian Này");
-                            }
-
-                            else {
-                                $(response).each(function (index, item) {
-                                    for (i = 1; i < rowLength; i++) {
+                                else {
+                                    $(response).each(function (index, item) {
+                                        for (i = 1; i < rowLength; i++) {
 
 
-                                        cc = 1;
-                                        var oCells = oTable.rows.item(i).cells;
+                                            cc = 1;
+                                            var oCells = oTable.rows.item(i).cells;
 
-                                        var cellLength = oCells.length;
+                                            var cellLength = oCells.length;
 
-                                        //loops through each cell in current row
-                                        //for (var j = 0; j < cellLength; j++) {
-                                        /* get your cell info here item(j) */
-                                        var cellVal = oCells.item(5).innerHTML;
-                                        //}
-                                        if (cellVal == item.PassportNumber) {
-                                            c++;
+                                            //loops through each cell in current row
+                                            //for (var j = 0; j < cellLength; j++) {
+                                            /* get your cell info here item(j) */
+                                            var cellVal = oCells.item(5).innerHTML;
+                                            //}
+                                            if (cellVal == item.PassportNumber) {
+                                                c++;
+                                            }
                                         }
-                                    }
 
-                                    if (c != 0) {
-                                        alert("Khách Hàng Đã Tồn Tại");
-                                    }
+                                        if (c != 0) {
+                                            alert("Khách Hàng Đã Tồn Tại");
+                                        }
 
-                                    else if (c == 0) {
+                                        else if (c == 0) {
 
-                                        tr = $("<tr/>");
-                                        tr.append($("<td/>").html(rowLength));
-                                        tr.append($("<td/>").html(item.TenKhachHang + "<input name='makhachhang' hidden value='" + item.MaKhachHang + "' type='text' />"));
-                                        tr.append($("<td/>").html(item.SDT));
-                                        tr.append($("<td/>").html(item.GioiTinh));
-                                        tr.append($("<td/>").html(item.DiaChi));
-                                        tr.append($("<td/>").html(item.PassportNumber));
-                                        tr.append($("<td/>").html("<input value='Mới Đăng Ký' type='button' class='btn btn-default' onclick='deletecus(this)' />"));
-                                        $("tbody.result").append(tr);
-                                    }
+                                            tr = $("<tr/>");
+                                            tr.append($("<td/>").html(rowLength));
+                                            tr.append($("<td/>").html(item.TenKhachHang + "<input name='makhachhang' hidden value='" + item.MaKhachHang + "' type='text' />"));
+                                            tr.append($("<td/>").html(item.SDT));
+                                            tr.append($("<td/>").html(item.GioiTinh));
+                                            tr.append($("<td/>").html(item.DiaChi));
+                                            tr.append($("<td/>").html(item.PassportNumber));
+                                            tr.append($("<td/>").html("<input value='Mới Đăng Ký' type='button' class='btn btn-default' onclick='deletecus(this)' />"));
+                                            $("tbody.result").append(tr);
+                                        }
 
-                                });
+                                    });
+                                }
                             }
-                        }
-                    });
-                }
-            });
+                        });
+                    }
+                });
+            }
+            
+
+
         });
 
     });

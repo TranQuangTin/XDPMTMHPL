@@ -26,7 +26,7 @@ namespace Web_Tour.Controllers
             return dateTime;
         }
 
-        public void Load(string SearchString = "", int page = 1, int pagesize = 10, Boolean haha=false)
+        public void Load(string SearchString = "", int page = 1, int pagesize = 10, Boolean haha = false)
         {
             DateTime gg = GetNistTime();
             IQueryable<DoanDuLich> list = db.DoanDuLiches;
@@ -71,11 +71,11 @@ namespace Web_Tour.Controllers
 
         }
 
-        public ActionResult Index(string SearchString = "", int page = 1, int pagesize = 10, Boolean haha=false)
+        public ActionResult Index(string SearchString = "", int page = 1, int pagesize = 10, Boolean haha = false)
         {
             if (ModelState.IsValid)
             {
-                Load(SearchString, page, pagesize,haha);
+                Load(SearchString, page, pagesize, haha);
                 ViewBag.SearchString = SearchString;
                 ViewBag.d = GetNistTime();
                 return View();
@@ -140,7 +140,7 @@ namespace Web_Tour.Controllers
         {
             DateTime gg = GetNistTime();
 
-            if(model.NgayKhoiHanh > gg)
+            if (model.NgayKhoiHanh > gg)
             {
                 var tour = db.Tours.Find(MaTour);
                 var dem = tour.SoDem;
@@ -195,7 +195,7 @@ namespace Web_Tour.Controllers
 
                 DateTime gg = GetNistTime();
 
-                if (model.NgayKhoiHanh <= gg)
+                if (gg < model.NgayKhoiHanh)
                 {
                     var tour = db.Tours.Find(MaTour);
                     int gia = LayMaGia(model);
@@ -244,6 +244,7 @@ namespace Web_Tour.Controllers
 
         public int ChangeStatus(int id)
         {
+           
             var user = db.DoanDuLiches.Find(id);
             if (user.TinhTrang == 1)
             {
@@ -257,14 +258,18 @@ namespace Web_Tour.Controllers
             return user.TinhTrang;
         }
 
-        public ActionResult UpdateStatus(int id)
+        public ActionResult UpdateStatus(int id, DateTime rp)
         {
-            var result = ChangeStatus(id);
-            return Json(new
+            DateTime gg = GetNistTime();
+            if (gg < rp)
             {
-                status = result
-            });
-
+                var result = ChangeStatus(id);
+                return Json(new
+                {
+                    status = result
+                });
+            }
+            return RedirectToAction("Index");
         }
 
         public ActionResult SearchCustomer(int Id, String date1, String date2)
@@ -300,6 +305,7 @@ namespace Web_Tour.Controllers
 
             ViewBag.KH = date1;
             ViewBag.KT = date2;
+            ViewBag.XET = GetNistTime();
 
             var check = db.DoanDuLiches.Find(Id);
             ViewBag.checkstatus = check.TinhTrang;
