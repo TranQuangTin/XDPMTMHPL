@@ -13,6 +13,7 @@ using System.Net;
 using System.Net.Cache;
 using System.IO;
 using System.Text.RegularExpressions;
+using DevExpress.XtraGrid.Localization;
 
 namespace Win_Tour
 {
@@ -40,6 +41,7 @@ namespace Win_Tour
             }
             catch { }
         }
+        
         private void LoadCboLoaiTour()
         {
             LoaiTourBUS lt=new LoaiTourBUS();
@@ -306,6 +308,7 @@ namespace Win_Tour
         {
             try
             {
+                gridControl2.DataSource = null;
                 gridControl2.DataSource = new BindingList<GiaTour>(DSGT);
             }
             catch { }
@@ -328,8 +331,12 @@ namespace Win_Tour
         int magia;
         private void gridView2_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-            magia = int.Parse(gridView2.GetRowCellValue(gridView2.FocusedRowHandle, gridColumn7).ToString());
-            textBox4.Text = gridView2.GetRowCellValue(gridView2.FocusedRowHandle, gridColumn9).ToString();
+            try
+            {
+                magia = int.Parse(gridView2.GetRowCellValue(gridView2.FocusedRowHandle, gridColumn7).ToString());
+                textBox4.Text = gridView2.GetRowCellValue(gridView2.FocusedRowHandle, gridColumn9).ToString();
+            }
+            catch { }
         }
 
         private void textBox6_Enter(object sender, EventArgs e)
@@ -356,6 +363,7 @@ namespace Win_Tour
         {
             try
             {
+                gridControl3.DataSource = null;
                 gridControl3.DataSource = new BindingList<DiaDiemHienThi>(ddht);
             }
             catch { }
@@ -364,7 +372,11 @@ namespace Win_Tour
 
         private void gridView3_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-            madd = int.Parse(gridView3.GetRowCellValue(gridView3.FocusedRowHandle, gridColumn10).ToString());
+            try
+            {
+                madd = int.Parse(gridView3.GetRowCellValue(gridView3.FocusedRowHandle, gridColumn10).ToString());
+            }
+            catch { }
         }
 
         private void simpleButton7_Click(object sender, EventArgs e)
@@ -447,6 +459,30 @@ namespace Win_Tour
                 MessageBox.Show("Cập nhật thành công!");
             }
             catch { MessageBox.Show("Đã có lỗi!"); }
+        }
+
+        private void gridView1_CustomDrawCell(object sender, DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventArgs e)
+        {
+            if (e.Column == gridColumn15)
+            {
+                e.DisplayText = Convert.ToString(e.RowHandle + 1);
+            }
+        }
+
+        private void gridView2_CustomDrawCell(object sender, DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventArgs e)
+        {
+            if (e.Column == gridColumn16)
+            {
+                e.DisplayText = Convert.ToString(e.RowHandle + 1);
+            }
+        }
+
+        private void gridView3_CustomDrawCell(object sender, DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventArgs e)
+        {
+            if (e.Column == gridColumn17)
+            {
+                e.DisplayText = Convert.ToString(e.RowHandle + 1);
+            }
         }
     }
 }

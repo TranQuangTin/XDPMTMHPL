@@ -9,11 +9,17 @@ namespace DAO
 {
     public class TourDAO
     {
-        static TourDuLichEntities tdl = new TourDuLichEntities();
         public static List<Tour> LoadTour()
         {
             return tdl.Tours.Where(x => x.TinhTrang == true).ToList();
             //câu này làm chậm
+            
+        }
+        static TourDuLichEntities tdl = new TourDuLichEntities();
+        public int LayMaGia(DoanDuLich t)
+        {
+            GiaTour gt = tdl.GiaTours.Where(x => x.MaTour == t.MaTour && x.NgayApDung<=t.NgayKhoiHanh).OrderByDescending(x => x.NgayApDung).First();
+            return (int)gt.MaGia;
         }
         public void SuaTour(Tour tt)
         {

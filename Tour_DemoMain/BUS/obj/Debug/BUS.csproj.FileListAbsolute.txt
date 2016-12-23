@@ -64,3 +64,17 @@ C:\Users\Hai\Documents\GitHub\XDPMTMHPL\Tour_DemoMain\BUS\bin\Debug\EntityFramew
 C:\Users\Hai\Documents\GitHub\XDPMTMHPL\Tour_DemoMain\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
 C:\Users\Hai\Documents\GitHub\XDPMTMHPL\Tour_DemoMain\BUS\obj\Debug\BUS.dll
 C:\Users\Hai\Documents\GitHub\XDPMTMHPL\Tour_DemoMain\BUS\obj\Debug\BUS.pdb
+D:\XDPMTMHPL\XDPMTMHPL\Tour_DemoMain\BUS\bin\Debug\BUS.dll.config
+D:\XDPMTMHPL\XDPMTMHPL\Tour_DemoMain\BUS\bin\Debug\BUS.dll
+D:\XDPMTMHPL\XDPMTMHPL\Tour_DemoMain\BUS\bin\Debug\BUS.pdb
+D:\XDPMTMHPL\XDPMTMHPL\Tour_DemoMain\BUS\bin\Debug\DAO.dll
+D:\XDPMTMHPL\XDPMTMHPL\Tour_DemoMain\BUS\bin\Debug\EF.dll
+D:\XDPMTMHPL\XDPMTMHPL\Tour_DemoMain\BUS\bin\Debug\EntityFramework.dll
+D:\XDPMTMHPL\XDPMTMHPL\Tour_DemoMain\BUS\bin\Debug\EntityFramework.SqlServer.dll
+D:\XDPMTMHPL\XDPMTMHPL\Tour_DemoMain\BUS\bin\Debug\DAO.pdb
+D:\XDPMTMHPL\XDPMTMHPL\Tour_DemoMain\BUS\bin\Debug\EF.pdb
+D:\XDPMTMHPL\XDPMTMHPL\Tour_DemoMain\BUS\bin\Debug\EntityFramework.xml
+D:\XDPMTMHPL\XDPMTMHPL\Tour_DemoMain\BUS\bin\Debug\EntityFramework.SqlServer.xml
+D:\XDPMTMHPL\XDPMTMHPL\Tour_DemoMain\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+D:\XDPMTMHPL\XDPMTMHPL\Tour_DemoMain\BUS\obj\Debug\BUS.dll
+D:\XDPMTMHPL\XDPMTMHPL\Tour_DemoMain\BUS\obj\Debug\BUS.pdb

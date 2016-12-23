@@ -57,3 +57,15 @@ C:\Users\Hai\Documents\GitHub\XDPMTMHPL\Tour_DemoMain\DAO\bin\Debug\EntityFramew
 C:\Users\Hai\Documents\GitHub\XDPMTMHPL\Tour_DemoMain\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
 C:\Users\Hai\Documents\GitHub\XDPMTMHPL\Tour_DemoMain\DAO\obj\Debug\DAO.dll
 C:\Users\Hai\Documents\GitHub\XDPMTMHPL\Tour_DemoMain\DAO\obj\Debug\DAO.pdb
+D:\XDPMTMHPL\XDPMTMHPL\Tour_DemoMain\DAO\bin\Debug\DAO.dll.config
+D:\XDPMTMHPL\XDPMTMHPL\Tour_DemoMain\DAO\bin\Debug\DAO.dll
+D:\XDPMTMHPL\XDPMTMHPL\Tour_DemoMain\DAO\bin\Debug\DAO.pdb
+D:\XDPMTMHPL\XDPMTMHPL\Tour_DemoMain\DAO\bin\Debug\EF.dll
+D:\XDPMTMHPL\XDPMTMHPL\Tour_DemoMain\DAO\bin\Debug\EntityFramework.dll
+D:\XDPMTMHPL\XDPMTMHPL\Tour_DemoMain\DAO\bin\Debug\EntityFramework.SqlServer.dll
+D:\XDPMTMHPL\XDPMTMHPL\Tour_DemoMain\DAO\bin\Debug\EF.pdb
+D:\XDPMTMHPL\XDPMTMHPL\Tour_DemoMain\DAO\bin\Debug\EntityFramework.xml
+D:\XDPMTMHPL\XDPMTMHPL\Tour_DemoMain\DAO\bin\Debug\EntityFramework.SqlServer.xml
+D:\XDPMTMHPL\XDPMTMHPL\Tour_DemoMain\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+D:\XDPMTMHPL\XDPMTMHPL\Tour_DemoMain\DAO\obj\Debug\DAO.dll
+D:\XDPMTMHPL\XDPMTMHPL\Tour_DemoMain\DAO\obj\Debug\DAO.pdb

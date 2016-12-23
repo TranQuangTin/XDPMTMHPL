@@ -144,6 +144,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ribbonControl1);
             this.Name = "MainForm";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

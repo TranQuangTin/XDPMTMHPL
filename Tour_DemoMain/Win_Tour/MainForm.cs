@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.XtraGrid.Localization;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,7 +17,21 @@ namespace Win_Tour
         {
             InitializeComponent();
         }
-
+        public class MyGridLocalizer : GridLocalizer
+        {
+            public override string GetLocalizedString(GridStringId id)
+            {
+                if (id == GridStringId.FindControlFindButton)
+                    return "Tìm";
+                if (id == GridStringId.FindControlClearButton)
+                    return "Hủy";
+                if (id == GridStringId.GridGroupPanelText)
+                    return "Kéo cột thả vào đây để nhóm theo từng giá trị của cột";
+                if (id == GridStringId.FindNullPrompt)
+                    return "Nhập chuỗi cần tìm...";
+                return base.GetLocalizedString(id);
+            }
+        }
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             panel1.Controls.Clear();
@@ -63,6 +78,12 @@ namespace Win_Tour
             UCThongKe dms = new UCThongKe();
             dms.Dock = System.Windows.Forms.DockStyle.Fill;
             panel1.Controls.Add(dms);
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+            GridLocalizer.Active = new MyGridLocalizer();
         }
     }
 }

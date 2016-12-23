@@ -76,3 +76,16 @@ C:\Users\Hai\Documents\GitHub\XDPMTMHPL\Tour_DemoMain\EF\bin\Debug\PagedList.Mvc
 C:\Users\Hai\Documents\GitHub\XDPMTMHPL\Tour_DemoMain\EF\obj\Debug\EF.csprojResolveAssemblyReference.cache
 C:\Users\Hai\Documents\GitHub\XDPMTMHPL\Tour_DemoMain\EF\obj\Debug\EF.dll
 C:\Users\Hai\Documents\GitHub\XDPMTMHPL\Tour_DemoMain\EF\obj\Debug\EF.pdb
+D:\XDPMTMHPL\XDPMTMHPL\Tour_DemoMain\EF\bin\Debug\EF.dll.config
+D:\XDPMTMHPL\XDPMTMHPL\Tour_DemoMain\EF\bin\Debug\EF.dll
+D:\XDPMTMHPL\XDPMTMHPL\Tour_DemoMain\EF\bin\Debug\EF.pdb
+D:\XDPMTMHPL\XDPMTMHPL\Tour_DemoMain\EF\bin\Debug\EntityFramework.dll
+D:\XDPMTMHPL\XDPMTMHPL\Tour_DemoMain\EF\bin\Debug\EntityFramework.SqlServer.dll
+D:\XDPMTMHPL\XDPMTMHPL\Tour_DemoMain\EF\bin\Debug\PagedList.dll
+D:\XDPMTMHPL\XDPMTMHPL\Tour_DemoMain\EF\bin\Debug\PagedList.Mvc.dll
+D:\XDPMTMHPL\XDPMTMHPL\Tour_DemoMain\EF\bin\Debug\EntityFramework.xml
+D:\XDPMTMHPL\XDPMTMHPL\Tour_DemoMain\EF\bin\Debug\EntityFramework.SqlServer.xml
+D:\XDPMTMHPL\XDPMTMHPL\Tour_DemoMain\EF\bin\Debug\PagedList.xml
+D:\XDPMTMHPL\XDPMTMHPL\Tour_DemoMain\EF\bin\Debug\PagedList.Mvc.xml
+D:\XDPMTMHPL\XDPMTMHPL\Tour_DemoMain\EF\obj\Debug\EF.dll
+D:\XDPMTMHPL\XDPMTMHPL\Tour_DemoMain\EF\obj\Debug\EF.pdb
