@@ -37,9 +37,26 @@ namespace DAO
         }
         public void XoaTour(int matour)
         {
+            List<GiaTour> gt = tdl.GiaTours.Where(x => x.MaTour == matour).ToList();
+            foreach (GiaTour g in gt)
+            {
+                tdl.GiaTours.Remove(g);
+                tdl.SaveChanges();
+            }
             Tour tt= tdl.Tours.Find(matour);
-            tt.TinhTrang=false;
+            tdl.Tours.Remove(tt);
             tdl.SaveChanges();
+        }
+        public void VHHTour(int matour)
+        {
+            Tour tt = tdl.Tours.Find(matour);
+            tt.TinhTrang = false;
+            tdl.SaveChanges();
+        }
+        public int KiemTraXoa(int matour)
+        {
+           List<DoanDuLich> dd = tdl.DoanDuLiches.Where(x => x.MaTour == matour).ToList();
+           return dd.Count;
         }
         public void ThemTour(Tour tr)
         {

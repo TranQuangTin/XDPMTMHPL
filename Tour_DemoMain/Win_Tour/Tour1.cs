@@ -67,13 +67,31 @@ namespace Win_Tour
             int matour = int.Parse(textBox1.Text);
             try
             {
-                tb.XoaTour(matour);
-                MessageBox.Show("Xóa Thành Công!");
-                Tour s1 = TourBUS.DSTour.Where(i => i.MaTour == matour).First();
-                var index = TourBUS.DSTour.IndexOf(s1);
-                if (index != -1)
-                    TourBUS.DSTour.RemoveAt(index);
-                HienThiTour();
+                if (tb.KiemTraXoa(matour) == 0)
+                {
+                    tb.XoaTour(matour);
+                    MessageBox.Show("Xóa Thành Công!");
+                    Tour s1 = TourBUS.DSTour.Where(i => i.MaTour == matour).First();
+                    var index = TourBUS.DSTour.IndexOf(s1);
+                    if (index != -1)
+                        TourBUS.DSTour.RemoveAt(index);
+                    HienThiTour();
+                }
+                else
+                {
+                    DialogResult dr = MessageBox.Show("Tour không thể xóa khi đã có đoàn đi. Bạn có muốn vô hiệu hóa tour này?", "Xác nhận", MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Warning);
+
+                    if (dr == DialogResult.Yes)
+                    {
+                        tb.VHHTour(matour);
+                            MessageBox.Show("Đã vô hiệu hóa. Sẽ không có đoàn khách mới nào đi tour này!");
+                            Tour s1 = TourBUS.DSTour.Where(i => i.MaTour == matour).First();
+                            var index = TourBUS.DSTour.IndexOf(s1);
+                            if (index != -1)
+                                TourBUS.DSTour.RemoveAt(index); HienThiTour();
+                    }
+                }
             }
             catch
             {

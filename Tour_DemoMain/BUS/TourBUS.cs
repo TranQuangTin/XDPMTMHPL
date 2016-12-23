@@ -33,5 +33,13 @@ namespace BUS
         {
             td.ThemTour(tr);
         }
+        public int KiemTraXoa(int matour)
+        {
+            return td.KiemTraXoa(matour);
+        }
+        public void VHHTour(int matour)
+        {
+            td.VHHTour(matour);
+        }
     }
 }
