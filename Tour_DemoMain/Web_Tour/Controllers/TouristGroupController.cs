@@ -32,7 +32,9 @@ namespace Web_Tour.Controllers
                 TenDoan = s.TenDoan,
                 NgayKhoiHanh = s.NgayKhoiHanh,
                 NgayKetThuc = s.NgayKetThuc,
-                TinhTrang = s.TinhTrang
+                TinhTrang = s.TinhTrang,
+                Gia = s.GiaTour.Gia
+
 
             }).ToPagedList(page, pagesize);
 
@@ -91,7 +93,7 @@ namespace Web_Tour.Controllers
 
         public int LayMaGia(DoanDuLich t)
         {
-            GiaTour gt = db.GiaTours.Where(x => x.MaTour == t.MaTour && x.NgayApDung <= t.NgayKhoiHanh).OrderByDescending(x => x.NgayApDung).First();
+            var gt = db.GiaTours.Where(x => x.MaTour == t.MaTour && x.NgayApDung <= t.NgayKhoiHanh).OrderByDescending(x => x.NgayApDung).First();
             return (int)gt.MaGia;
         }
 
@@ -141,13 +143,14 @@ namespace Web_Tour.Controllers
         [HttpPost]
         public ActionResult Update(DoanDuLich model, int MaTour, Boolean Status)
         {
-            if (ModelState.IsValid)
+            try
             {
                 var tour = db.Tours.Find(MaTour);
                 int gia = LayMaGia(model);
                 var dem = tour.SoDem;
                 var ngay = tour.SoNgay;
-
+                model.TinhTrang = model.TinhTrang;
+                model.MaGia = gia;
                 if (dem > ngay)
                 {
                     model.NgayKetThuc = model.NgayKhoiHanh.AddDays(Convert.ToDouble(dem));
@@ -165,19 +168,25 @@ namespace Web_Tour.Controllers
                 {
                     model.TinhTrang = 3;
                     db.Entry(model).State = System.Data.Entity.EntityState.Modified;
+                    db.SaveChanges();
+                    Load();
+                    return RedirectToAction("Index");
                 }
                 else
                 {
                     db.Entry(model).State = System.Data.Entity.EntityState.Modified;
+                    db.SaveChanges();
                 }
+                //model.MaGia = gia;
+                return RedirectToAction("Index");
 
-                model.TinhTrang = 1;
-                model.MaGia = gia;
-                db.SaveChanges();
-                Load();
+            }
+            catch
+            {
                 return RedirectToAction("Index");
             }
-            return RedirectToAction("Index");
+            
+           
         }
 
         public int ChangeStatus(int id)

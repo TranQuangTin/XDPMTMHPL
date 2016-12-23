@@ -7,6 +7,7 @@ namespace Web_Tour.Models
 {
     public class ReportInfo
     {
+        public int? Gia { get;  set; }
         public int MaDoan { get;  set; }
         public int? MaTour { get; set; }
         public string MoTa { get;  set; }
